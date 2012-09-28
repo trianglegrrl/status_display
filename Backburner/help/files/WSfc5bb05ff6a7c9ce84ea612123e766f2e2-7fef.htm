@@ -1,0 +1,175 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Resolving an Unavailable Render Node Problem</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Resolving an Unavailable Render Node Problem">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fef.htm','d0e6051','index.html'); initPage('Resolving an Unavailable Render Node Problem','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fef.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fef.htm" target="content" onClick="javascript:showInContents('d0e6051');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fef.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Resolving Network Card Priority</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff0.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Troubleshooting Backburner</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Restarting Suspended Render Nodes</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fee.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm">Troubleshooting Backburner</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Resolving an Unavailable
+                  Render Node Problem</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fef"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73fa"></a></span>The
+            most common reasons, in a Linux or Windows system, that a render
+            node appears unavailable are that the workstation is offline, the Backburner Server
+            is not running or is hung, the Server is not using the correct IP
+            address for the Manager, or the Manager cannot communicate with
+            the Server. 
+         </p>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73f8"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73f7"></a></span>To resolve an unavailable render node
+            problem:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73f6"></a></span>Verify that the render node workstation
+               is online.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73f5"></a></span>If you are not at the
+                  render node, use the <em class="mild">ping</em> command to see this workstation
+                  is online. For help with the <em class="mild">ping</em> command,
+                  see <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm">
+                           <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm-->Verifying Communication Between Two Hosts</a></span></span>. 
+               </p>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73f4"></a></span>If the workstation is
+                  not online, restart the render node, and then see if it appears
+                  in the Backburner network. 
+               </p>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73f3"></a></span>If this does not resolve
+                  the problem, continue to the next step. 
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73f2"></a></span>Check if the render node is scheduled
+               to be offline using the Windows-based Backburner Monitor. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ff9.htm">
+                        <!--Reference = WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ff9; Target topic = WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ff9.htm-->Setting Render Node Availability</a></span></span>.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73f1"></a></span>If the render node is
+                  scheduled to be offline and it should be online at this time, change
+                  the schedule for the render node.
+               </p>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73f0"></a></span>If this does not resolve
+                  the problem, continue to the next step. 
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73ef"></a></span>Verify the Backburner Server is running. 
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73ee"></a></span>If it is not running
+                  or is hung, start the Server. Refer to the <em class="mild">Autodesk Backburner Installation
+                     Guide</em> for help starting Backburner Server.
+               </p>
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73ed"></a></span><div class="note-note"><span class="label">Note</span>If you are running Backburner Server
+                     as a Windows Service, display the Services control panel, and verify
+                     that the Server service is running. If the service is not running,
+                     highlight it and click Start.
+                  </div>
+               </div>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73ec"></a></span>If this does not fix
+                  the problem, continue to the next step.
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73eb"></a></span>For Windows systems only, verify that
+               the render node can communicate with the correct Manager.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73ea"></a></span>Connect the render node
+                  directly to the Backburner Manager workstation by doing the following:
+               </p>
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73e9"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73e8"></a></span>Disable any Backburner Server settings
+                     or preferences that automatically connect to the Backburner Manager.
+                     In the Backburner Server General Properties dialog, disable Automatic
+                     Search and manually enter the name or IP address of the Backburner Manager. 
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73e7"></a></span>If the render node has more than one
+                     network card, in the Backburner Server General Properties dialog,
+                     manually enter the name or IP address you want to assign to the Backburner Server
+                     in the Server Name or IP Address field. 
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73e6"></a></span>Verify that the <span class="filePath">HOSTS</span> file located in the <span class="filePath">winnt\system32\drivers\etc\</span> directory includes
+                     the IP address and corresponding machine name for each render node
+                     and the Backburner Manager workstation on the network. This file
+                     maps machine names to IP addresses.
+                  </li>
+               </ul>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73e5"></a></span>If restarting the Server
+                  after this step does not fix the problem, continue to the next step. 
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73e4"></a></span>If a firewall is running on Backburner network
+               components, review the firewall settings for each network component
+               to ensure the following:
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73e3"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73e2"></a></span>The Backburner application(s) are allowed
+                     to access the network.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73e1"></a></span>The ports used by the Backburner Manager
+                     and the Backburner Monitor to communicate are not blocked by the firewall.
+                     By default, these ports are 3233 and 3234.
+                  </li>
+               </ul>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73e0"></a></span>Verify that the Manager can <em class="mild">ping</em> the
+               render node. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm">
+                        <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm-->Verifying Communication Between Two Hosts</a></span></span>.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73df"></a></span>If the Manager can successfully <em class="mild">ping</em> the
+                  render node, continue to the next step. 
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73de"></a></span>Configure the log files to report detailed
+               information about TCP/IP packets, as follows.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73dd"></a></span>Enable the Log Debug
+                  and Log Debug Extended options in the preferences for the Backburner Manager
+                  and the Backburner Server workstations, and then restart the Backburner Manager
+                  and Backburner Server applications. 
+               </p>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73dc"></a></span>Examine the TCP/IP information
+                  in the log files to determine why the render node and Backburner Manager
+                  are not communicating. 
+               </p>
+            </li>
+         </ol>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

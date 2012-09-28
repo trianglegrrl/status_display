@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alaina Home Management</title>
+    <!-- CSS and JS at the bottom of <body> -->
+  </head>
+	<body>
+		<div class="container-fluid height-full">
+			<div class="time-row row-fluid height-half" id="top-row">
+				<div class="border-radius height-full time-container span6 pagination-centered">
+					<h2 class="border-radius-top">Location in spacetime</h2>
+					<div data-utc-offset="-4" class="time-banner specified-in-timezone time-counter" id="time-utc">00:00:00</div>
+					<div style="padding-top: 20px;" class="time-counter utc-date">00:00:00</div>
+					<div style="padding-top: 20px;" class="time-counter ">(43.670792, -79.428016)</div>
+<!-- 
+					<h3 class="border-radius-bottom">
+						<span class="utc-date"></span>
+					</h3>
+ -->
+				</div>
+				<div class="border-radius height-full time-container span3 pagination-centered">
+					<h2 class="border-radius-top">63S at Dupont</h2>
+					<div class="time-counter"><span data-arrival-index="0" class="63s-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="1" class="63s-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="2" class="63s-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="3" class="63s-arrival"></span></div>
+				</div>
+				<div class="border-radius height-full time-container span3 pagination-centered">
+					<h2 class="border-radius-top">26E at Ossington</h2>
+					<div class="time-counter"><span data-arrival-index="0" class="26e-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="1" class="26e-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="2" class="26e-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="3" class="26e-arrival"></span></div>
+				</div>
+			</div>
+			<div class="time-row row-fluid height-half" id="top-row">
+				<div class="border-radius height-full time-container span6 pagination-centered">
+					<h2 class="border-radius-top">Weather</h2>
+					<div class="row-fluid weather-details">
+						<div class="pagination-centered">
+							Now: <span class="temperature weather-temp"></span>&deg; C
+							(<span class="temperature weather-high"></span>&deg;  - 
+							<span class="temperature weather-low"></span>&deg; C; 
+							Tmr <span class="temperature weather-tomorrow-high"></span>&deg;  - 
+							<span class="temperature weather-tomorrow-low"></span>&deg; C)
+						</div>
+						<div class="pagination-centered">
+
+							<img class="weather-image" src="" />
+<!-- 
+							<div style="" class="">
+								<span class="weather-temp"></span>&deg; C
+							<div>
+ -->
+						</div>
+					</div>
+					<h3 class="border-radius-bottom">
+						Currently: <span class="weather-currently"></span> / 
+						Forecast: <span class="weather-forecast"></span>
+					</h3>
+				</div>
+				<div class="border-radius height-full time-container span6 pagination-centered">
+					<h2 style="margin-bottom: 0" class="border-radius-top">Calendar</h2>
+					<span class="google-calendar-iframe">
+					</span>
+
+				</div>
+			</div>
+
+
+		</div>
+		
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/su-panel.css" rel="stylesheet" />
+		<style type="text/css">
+			body {
+    		height: 100%;
+    		background-color: black;
+    		color: white;
+    	}
+    	div.time-container {
+    		border: 2px solid #000;
+    		position: relative;
+    	}
+
+		</style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery.simpleWeather-2.0.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/su-time-panel.js"></script>
+    
+    <script type="text/javascript">
+
+    	function ttcStops()
+    	{
+    		jQuery.getJSON('ttc-stop.php?stopid=1021', function(stops) {
+					$('.26e-arrival').each(function () {
+						if (!isNaN(stops[$(this).attr('data-arrival-index')]))
+						{
+							totalSeconds = stops[$(this).attr('data-arrival-index')];
+							minutes = Math.floor(totalSeconds / 60);
+							seconds = zeroPad(totalSeconds % 60, 2);
+							
+							$(this).html(parseInt(minutes) + "m " + seconds);
+							if (totalSeconds < 180)
+							{
+								$(this).addClass('text-error').removeClass('text-warning');
+							} else if (totalSeconds < 300) {
+								$(this).addClass('text-warning').removeClass('text-error');
+							} else {
+								$(this).removeClass('text-warning').removeClass('text-error');
+							}
+						}	
+					});
+    		});
+    		jQuery.getJSON('ttc-stop.php?stopid=13895', function(stops) {
+					$('.63s-arrival').each(function () {
+						if (!isNaN($(this).attr('data-arrival-index')))
+						{
+							totalSeconds = stops[$(this).attr('data-arrival-index')];
+							minutes = Math.floor(totalSeconds / 60);
+							seconds = zeroPad(totalSeconds % 60, 2);
+							
+							$(this).html(minutes + "m " + seconds);
+							if (totalSeconds < 180)
+							{
+								$(this).addClass('text-error').removeClass('text-warning');
+							} else if (totalSeconds < 300) {
+								$(this).addClass('text-warning').removeClass('text-error');
+							} else {
+								$(this).removeClass('text-warning').removeClass('text-error');
+							}
+						}	
+					});
+    		});
+    	}
+    	
+			function doSimpleWeather() 
+			{
+				$.simpleWeather({
+								location: 'toronto, on',
+								unit: 'c',
+								success: function(weather) {
+									console.log(weather);	
+												html = '';
+												$(".weather-city").html(weather.city);
+												$(".weather-region").html(weather.region);
+												$(".weather-high").html(weather.high);
+												$(".weather-low").html(weather.low);
+												$(".weather-tomorrow-high").html(weather.tomorrow.high);
+												$(".weather-tomorrow-low").html(weather.tomorrow.low);
+												$(".weather-currently").html(weather.currently);
+												$(".weather-forecast").html(weather.forecast);
+												$(".weather-temp").html(weather.temp);
+												$(".weather-wind-chill").html(weather.wind.chill);
+												$(".weather-units-temp").html(weather.units.temp);
+												$(".weather-sunrise").html(weather.sunrise);
+												$(".weather-sunset").html(weather.sunset);
+												$(".weather-image").attr('src', weather.image);
+												$('.temperature').each(function () {
+													val = $(this).text() * 1;
+													if (val >= 28)
+													{
+														$(this).removeClass('text-info').addClass('text-error').removeClass('text-warning').removeClass('text-succeess').removeClass('muted');
+													} else if (val >= 24) {
+														$(this).removeClass('text-info').removeClass('text-error').addClass('text-warning').removeClass('text-succeess').removeClass('muted');
+													} else if (val <= 8) {
+														$(this).addClass('text-info').removeClass('text-error').removeClass('text-warning').removeClass('text-succeess').removeClass('muted');
+													} else if (val <= 16) {
+														$(this).removeClass('text-info').removeClass('text-error').removeClass('text-warning').removeClass('text-succeess').addClass('muted');
+													} else {
+														$(this).removeClass('text-info').removeClass('text-error').removeClass('text-warning').addClass('text-success').removeClass('muted');;
+													}
+													
+												});
+			// 									html = '<h2>'+weather.city+', '+weather.region+' '+weather.country+'</h2>';
+			// 									html += '<p><strong>H</strong>: '+weather.high+'&deg; '+weather.units.temp+' - <strong>L</strong>: '+weather.low+'&deg; '+weather.units.temp+'</p>';
+			// 									html += '<p><strong>Current Temp</strong>: '+weather.temp+'&deg; '+weather.units.temp+' ('+weather.tempAlt+'&deg; C)</p>';
+			// 									html += '<p><strong>Thumbnail</strong>: <img src="'+weather.thumbnail+'"></p>';
+			// 									html += '<p><strong>Wind</strong>: '+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+' <strong>Wind Chill</strong>: '+weather.wind.chill+'</p>';
+			// 									html += '<p><strong>Currently</strong>: '+weather.currently+' - <strong>Forecast</strong>: '+weather.forecast+'</p>';
+			// 									html += '<p><img src="'+weather.image+'"></p>';
+			// 									html += '<p><strong>Humidity</strong>: '+weather.humidity+' <strong>Pressure</strong>: '+weather.pressure+' <strong>Rising</strong>: '+weather.rising+' <strong>Visibility</strong>: '+weather.visibility+'</p>';
+			// 									html += '<p><strong>Heat Index</strong>: '+weather.heatindex+'"></p>';
+			// 									html += '<p><strong>Sunrise</strong>: '+weather.sunrise+' - <strong>Sunset</strong>: '+weather.sunset+'</p>';
+			// 									html += '<p><strong>Tomorrow\'s Date</strong>: '+weather.tomorrow.day+' '+weather.tomorrow.date+'<br /><strong>Tomorrow\'s High/Low</strong>: '+weather.tomorrow.high+'/'+weather.tomorrow.low+'<br /><strong>Tomorrow\'s Forecast</strong>: '+weather.tomorrow.forecast+'<br /> <strong>Tomorrow\'s Image</strong>: '+weather.tomorrow.image+'</p>';
+			// 									html += '<p><strong>Last updated</strong>: '+weather.updated+'</p>';
+			// 	
+			// 									$(".weather-detailed").html(html);
+								},
+								error: function(error) {
+												$(".weather-detailed").html("<p>"+error+"</p>");
+								}
+				});
+			}
+			
+			function updateGoogleCalendar()
+			{
+				$('.google-calendar-iframe').html('<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=200&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vkvasjhpfba5uvqab6o91m92b4%40group.calendar.google.com&amp;color=%23691426&amp;src=alainahardie%40gmail.com&amp;color=%232952A3&amp;src=en.canadian%23holiday%40group.v.calendar.google.com&amp;color=%23A32929&amp;src=kristascottdixon%40gmail.com&amp;color=%230D7813&amp;ctz=America%2FToronto" style=" border-width:0 " width="700" height="250" frameborder="0" scrolling="no"></iframe>');
+			}
+
+			$(function() {
+				ttcStops();
+				doSimpleWeather();
+				updateGoogleCalendar();
+				setInterval("ttcStops()", 1000);
+				setInterval("doSimpleWeather()", 180000);
+				setInterval("updateGoogleCalendar()", 180000);
+			});
+    </script>
+	</body>
+</html>

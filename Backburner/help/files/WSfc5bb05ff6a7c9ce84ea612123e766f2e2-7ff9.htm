@@ -1,0 +1,105 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Verifying Communication Between Two Hosts</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Verifying Communication Between Two Hosts">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm','d0e5406','index.html'); initPage('Verifying Communication Between Two Hosts','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm" target="content" onClick="javascript:showInContents('d0e5406');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Problems with Render Nodes</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ffa.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Troubleshooting Backburner</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Verifying the Packet Size</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff8.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm">Troubleshooting Backburner</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Verifying Communication
+                  Between Two Hosts</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74ae"></a></span>Use the <span class="menuText">ping</span> command to test communication
+            between hosts, for example between a render node and a Backburner Manager
+            on Linux or Windows systems.
+         </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74ab"></a></span><div class="table_Ruled">
+            <table cellpadding="0" cellspacing="0" class="ruled">
+               <colgroup>
+                  <col style="width:1.858in">
+                  <col style="width:5.250in">
+                  <tr class="RuledHeading">
+                     <th class="table-heading">Use: </th>
+                     <th class="table-heading">To: </th>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body"><span class="menuText">ping </span> <span class="keyboardEntry">&lt;ip_address&gt;</span></td>
+                     <td class="table-body">Verify that the host on which you issue the command can
+                        communicate with the host whose address you specify in<span class="keyboardEntry"> &lt;ip_address&gt;</span>. <span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74aa"></a></span><p class="table-body">Example: <span class="menuText"> ping 132.22.34.15</span> 
+                        </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74a9"></a></span><p class="table-body">If this command does
+                           not return a response from the host whose IP address you specified, ensure
+                           there is a valid network connection, and that both machines are
+                           on the same network. 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body"><span class="menuText">ping </span><span class="keyboardEntry"> &lt;hostname&gt;</span></td>
+                     <td class="table-body">Verify that the host on which you issue the command can
+                        communicate with the host whose name you specify in <span class="keyboardEntry">&lt;hostname&gt;</span>. <span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74a8"></a></span><p class="table-body">Example: <span class="menuText"> ping managerhost</span> 
+                        </p>
+                     </td>
+                  </tr>
+               </colgroup>
+            </table>
+         </div>
+         <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74a7"></a></span><div class="note-note"><span class="label">Note</span>If you can successfully
+               “ping” the IP address, but not the hostname, the Domain Name Server
+               may be unable to map the hostname to an IP address. Or, if you are
+               running the command on a Linux workstation, the hostname/IP address
+               pair may be missing from the <span class="filePath">/etc/hosts</span> file
+               or from the NIS (Network Information Services) server. If necessary,
+               consult your network administrator for help correcting the missing hostname.
+            </div>
+         </div>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

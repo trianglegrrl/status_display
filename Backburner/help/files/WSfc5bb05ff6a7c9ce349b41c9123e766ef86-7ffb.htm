@@ -1,0 +1,232 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Shifting Nodes Between Jobs</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Shifting Nodes Between Jobs">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ffb.htm','d0e4005','index.html'); initPage('Shifting Nodes Between Jobs','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ffb.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ffb.htm" target="content" onClick="javascript:showInContents('d0e4005');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ffb.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Monitoring Render Nodes</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ffd.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Managing Render Nodes – Web</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Deleting Offline Render Nodes</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ffa.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WS73099cc142f48755-6aae5668123e144a987-7dee.htm">Backburner Web Monitor
+                  Reference</a>&nbsp;&gt;&nbsp;<a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-8000.htm">Managing Render Nodes – Web</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Shifting Nodes Between
+                  Jobs</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ffb"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-3717"></a></span>When
+            a job is submitted by a creative application to Backburner for processing,
+            the Backburner Manager automatically sends it as sub-jobs, called <em class="mild">tasks</em>, to
+            render nodes for processing. Visual Effects and Finishing render
+            tasks are sent to nodes on which Burn has been installed, 3ds Max
+            tasks are sent to nodes equipped with 3ds Max, and so on. A task
+            can consist of a single frame, a set of frames, or an entire clip,
+            depending on the creative application and the nature of the work
+            required.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-3710"></a></span>The initial choice of
+            render nodes for each job is specified by the client application
+            and applied automatically by Backburner, based on your Backburner settings.
+            However, you can easily assign new nodes, or remove those currently
+            assigned, as you see fit. For example, if a job has been sent to
+            a particular server group, you can easily add nodes from outside
+            the group to assist in the processing. When you add a node, Backburner
+            sends the next task to the newly added node.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75cd"></a></span></p>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75c8"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75c7"></a></span>To shift a render node:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75c6"></a></span>On the Jobs tab, select the job of interest,
+               and choose Settings from the Action menu, or double-click the job.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75c4"></a></span>The Job Details page
+                  appears. 
+               </p><span class="anchor_wrapper"><a name="WS73099cc142f4875532927b7f1241b571f20-6f23"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_manage_jobs_web/ink_svg/BB_WebMonJobDetails.jpg"></p>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75c2"></a></span>In the Job Details page, click on the
+               Server Assignment tab.<span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-1ea4"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_manage_nodes_web/ink_svg/BB_WebMonServerAssigTab.jpg"></p>
+               </div>
+               <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-1ea3"></a></span>The following table explains
+                  the contents of the Server Assignment tab.
+               </p>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff5bb0a1a512649144cfc-1a7a"></a></span></p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-3bad"></a></span><div class="table_Ruled">
+                  <table cellpadding="0" cellspacing="0" class="ruled">
+                     <colgroup>
+                        <col style="width:1.186in">
+                        <col style="width:4.064in">
+                        <tr class="RuledHeading">
+                           <th class="table-heading">Field</th>
+                           <th class="table-heading">Description</th>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Assigned Server Group</td>
+                           <td class="table-body">Name of the server group, if any, to which the job was
+                              assigned. A server group is a named collection of servers. Only
+                              servers in the specified group will work on the job.<span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-1ea2"></a></span><p class="table-body">See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8.htm">
+                                          <!--Reference = WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8; Target topic = WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8.htm-->Working with Server Groups</a></span></span>.
+                              </p>
+                           </td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Max Server Count</td>
+                           <td class="table-body">The maximum number of render nodes made available for
+                              the job, as specified when the job was submitted. Set to 0 (zero)
+                              to assign the job to all servers.
+                           </td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Assigned Servers</td>
+                           <td class="table-body">A comma-separated list of servers currently assigned
+                              to the job. If you make changes, be sure to save them, then click
+                              the Refresh button to ensure the list is up to date.
+                           </td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Filter on Job Type</td>
+                           <td class="table-body">Select this checkbox to list only the servers on which
+                              the required adapter is installed.
+                           </td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Name</td>
+                           <td class="table-body">Name of the server.</td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Assigned to Job</td>
+                           <td class="table-body">A checkbox indicating whether or not the listed server
+                              is assigned to the job. To add a new server to the job, check a
+                              checkbox. Notice the Assigned Servers list is updated automatically.
+                              Nevertheless, click the Save button, then the Refresh button to
+                              ensure the list is up to date.
+                           </td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Description</td>
+                           <td class="table-body">A description of the server.</td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Status</td>
+                           <td class="table-body">The current activity of the server:
+                              <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-398a"></a></span><ul>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-3989"></a></span>absent: Server is no longer seen by the
+                                    manager, possibly down.
+                                 </li>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-3988"></a></span>active: Server is currently working on
+                                    a job.
+                                 </li>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-3987"></a></span>suspended: Server has been put on hold.
+                                 </li>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-3986"></a></span>idle: Server is inactive.
+                                 </li>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-3985"></a></span>error: Problem on the server.
+                                 </li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Perf. Index</td>
+                           <td class="table-body">A value in the range [0–1] indicating the performance
+                              level of the server, relative to other servers on the same job.
+                              A score of 1 indicates this is the best-performing server.
+                           </td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Adapters</td>
+                           <td class="table-body">The adapters installed on the server, for example:
+                              <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-3984"></a></span><ul>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-3983"></a></span>Burn: The Burn renderer.
+                                 </li>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-3982"></a></span>Command Line Tool: The Backburner cmdjob
+                                    command-line plug-in allows you to submit batch, executable, or
+                                    script files to Backburner as “custom” jobs. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ffe.htm">
+                                             <!--Reference = WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ffe; Target topic = WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ffe.htm-->Submitting Jobs from a Command Line or Script</a></span></span>.
+                                 </li>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-3981"></a></span>mio: The MIO adapter engine is responsible
+                                    for transcoding some streaming media formats (such as R3D and OpenEXR).
+                                 </li>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-3980"></a></span>Wire: Installed with Stone and Wire.
+                                    Can be used to import/export media, perform Wire transfers, etc.
+                                    Used internally by Autodesk Visual Effects and Finishing applications.
+                                 </li>
+                              </ul>
+                           </td>
+                        </tr>
+                     </colgroup>
+                  </table>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75bf"></a></span>Assign and/or remove servers, as desired,
+               using the checkboxes.
+               <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-15b7"></a></span>For information on using
+                  the Assigned Server Group pull-down menu, see <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8.htm">
+                           <!--Reference = WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8; Target topic = WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8.htm-->Working with Server Groups</a></span></span>.
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75bd"></a></span>Apply your changes.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75bc"></a></span>The selected render nodes
+                  are assigned to the job. If a render node is already occupied, it
+                  completes its current task first.
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-1ea1"></a></span>Verify your changes by clicking the Refresh
+               button. This queries the Backburner Manager for the most up-to-date
+               information.
+               <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-1ea0"></a></span>The Assigned Servers
+                  list is updated to reflect your changes.
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75bb"></a></span>Click Close to return to the list of
+               all servers.
+            </li>
+         </ol>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

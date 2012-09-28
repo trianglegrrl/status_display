@@ -1,0 +1,92 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Resolving Network Card Priority</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Resolving Network Card Priority">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff0.htm','d0e6025','index.html'); initPage('Resolving Network Card Priority','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff0.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff0.htm" target="content" onClick="javascript:showInContents('d0e6025');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff0.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Adding the Backburner Path to the Windows Path Environment Variable</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff1.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Troubleshooting Backburner</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Resolving an Unavailable Render Node Problem</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fef.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm">Troubleshooting Backburner</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Resolving Network Card Priority</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff0"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7402"></a></span>If you have multiple network cards in
+            your Linux or Windows render node, by default, Backburner Server
+            uses the IP address of the first network card that it finds to identify itself
+            to the Backburner Manager. This may lead to problems if this is
+            the wrong card. You can force Backburner Server to use a specific network
+            card. The following procedure describes how.
+         </p>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7400"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73ff"></a></span>To resolve network card priority:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73fe"></a></span>Do one of the following: 
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73fd"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73fc"></a></span>(Windows render node) Stop the Backburner Server
+                     on the node, and the Backburner Manager. Then on the render node,
+                     from the Start menu, choose Programs, Autodesk, Backburner, then
+                     server to open the Backburner Server General Properties dialog and
+                     in the Server Name or IP Address field, enter the name or IP address
+                     you want to associate with the Backburner Server. Restart the Backburner Manager and
+                     the Backburner Server. 
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73fb"></a></span>(Windows or Linux render node) Stop the Backburner Server
+                     on the node, and the Backburner Manager. Load the <em class="mild">/usr/discreet/backburner/Network/backburner.xml</em> file
+                     in an XML editor or text editor and edit the <span class="keyboardEntry">&lt;SystemConfiguration&gt;/&lt;AppDetails&gt;/&lt;ServerSettings&gt;/&lt;ServerName&gt;</span> to
+                     reflect the host name or IP address you want to associate with the Backburner Server.
+                     Save and exit the file, then restart the Backburner Manager and
+                     the Backburner Server. 
+                  </li>
+               </ul>
+            </li>
+         </ol>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

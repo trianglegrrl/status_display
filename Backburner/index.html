@@ -1,0 +1,148 @@
+<!-- saved from url=(0014)about:internet -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="favicon.ico"/>
+<title>Autodesk Backburner Monitor 2012.1.0  (Build 425)</title>
+<script src="AC_OETags.js" language="javascript"></script>
+<style>
+	body { margin: 0px; overflow:hidden }
+</style>
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+var application = "BBMon";
+var swf = "BBMon.swf";
+var width = "100%";
+var height = "100%";
+var bgcolor = "#333333";
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+
+<body scroll="no">
+<script language="JavaScript" type="text/javascript">
+<!--
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(9, 0, 0);
+
+
+// Check to see if a player with Flash Product Install is available and the version does not meet the requirements for playback
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// MMdoctitle is the stored document.title value used by the installation process to close the window that started the process
+	// This is necessary in order to close browser windows that are still utilizing the older version of the player after installation has completed
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", width,
+		"height", height,
+		"align", "middle",
+		"id", application,
+		"quality", "high",
+		"bgcolor", bgcolor,
+		"name", application,
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", application,
+			"width", width,
+			"height", height,
+			"align", "middle",
+			"id", application,
+			"quality", "high",
+			"bgcolor", bgcolor,
+			"name", application,
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var msg = 'This content requires the Adobe Flash Player. '
+   	+ '<a href=http://www.adobe.com/go/getflash/>Get Flash</a>';
+    document.write(msg);
+  }
+// -->
+
+function clearAuthenticationCache(page) {
+  if (!page) page = '.logout';
+  try {
+    var agt=navigator.userAgent.toLowerCase();
+    if (agt.indexOf("msie") != -1) {
+      // IE clear HTTP Authentication
+      document.execCommand("ClearAuthenticationCache");
+      document.URL=location.href;
+    }
+    else if (agt.indexOf("firefox") != -1 || agt.indexOf("chrome") != -1) {
+      // Let's create an xmlhttp object
+      var xmlhttp = createXMLObject();
+      // Let's prepare invalid credentials
+      xmlhttp.open("GET", page, true, "backburner", "backburner");
+      // Let's send the request to the server
+      xmlhttp.send("");
+      // Let's abort the request
+      setTimeout("xmlhttp.abort();", 100);
+      setTimeout("parent.window.location = parent.window.location;",200);
+    }
+    else {
+      alert("The browser doesn't support http authentication logout, please close the browser manually to logout");
+    }
+  } catch(e) {
+    // There was an error
+    alert("An error occured when logout, please close the window to logout.");
+    return;
+  }
+}
+
+function createXMLObject() {
+  try {
+    if (window.XMLHttpRequest) {
+      xmlhttp = new XMLHttpRequest();
+    }
+    // code for IE
+    else if (window.ActiveXObject) {
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  } catch (e) {
+    xmlhttp=false
+  }
+  return xmlhttp;
+}
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id=application width=width height=height
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value=swf />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value=bgcolor />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src=swf quality="high" bgcolor=bgcolor
+				width=width height=height name=application align="middle"
+				play="true"
+				loop="false"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
+</body>
+</html>

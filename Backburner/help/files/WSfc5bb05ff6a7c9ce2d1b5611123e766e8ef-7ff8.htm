@@ -1,0 +1,98 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Working with Jobs</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Working with Jobs">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce2d1b5611123e766e8ef-7ff8.htm','d0e1495','index.html'); initPage('Working with Jobs','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce2d1b5611123e766e8ef-7ff8.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce2d1b5611123e766e8ef-7ff8.htm" target="content" onClick="javascript:showInContents('d0e1495');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce2d1b5611123e766e8ef-7ff8.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Launching the Backburner Web Monitor</div><a href="WS1a9193826455f5ff-316fd70e123dece8002-780a.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Getting Started</div><a href="WSfc5bb05ff6a7c9ce2d1b5611123e766e8ef-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Working with Render Nodes</div><a href="WSfc5bb05ff6a7c9ce2d1b5611123e766e8ef-7ff6.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WSfc5bb05ff6a7c9ce2d1b5611123e766e8ef-8000.htm">Getting Started</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Working with Jobs</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce2d1b5611123e766e8ef-7ff8"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-77e3"></a></span>Stated
+            briefly, a job flows from creative application to processing engine
+            as follows. The creative application—Smoke, 3ds Max, Lustre, etc.—submits
+            the job to the Backburner Manager, which is then distributed as
+            blocks of tasks to the Backburner Servers with the corresponding
+            adapter installed, residing on the render nodes. The servers invoke
+            the appropriate processing engine, which carries out its assigned tasks.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-77e1"></a></span>While it is the creative
+            application that specifies the number of tasks in a particular job,
+            once the job is on the Backburner network, it becomes the responsibility
+            of the Backburner Manager. For example, it is the manager that decides
+            how many tasks each render node is asked to carry out, in what order tasks
+            are sent out, etc.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-1b60"></a></span>This is illustrated in
+            the following diagram.
+         </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-30857b3612671cdec18-5260"></a></span><div class="figure-anchor">
+            <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_getting_started/ink_svg/AdapterAPI_JobAnatomy.jpg"></p>
+         </div>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-77e0"></a></span>The process just described
+            is largely automated and can operate entirely without user intervention.
+            That being said, once a job is on the Backburner network, you can
+            intervene in a number of ways. Aside from passively monitoring jobs,
+            the most common job activity is to suspend a job, change its settings,
+            and restart the job.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-77db"></a></span>For more information
+            see:
+         </p>
+         <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-77da"></a></span><ul>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-77d9"></a></span>Windows Monitor: <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce6fe78ebf123e766ede0-8000.htm">
+                        <!--Reference = WSfc5bb05ff6a7c9ce6fe78ebf123e766ede0-8000; Target topic = WSfc5bb05ff6a7c9ce6fe78ebf123e766ede0-8000.htm-->Managing and Modifying Jobs – Windows</a></span></span></li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-77d8"></a></span>Web Monitor: <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce-177dc1ab123e766ec3a-8000.htm">
+                        <!--Reference = WSfc5bb05ff6a7c9ce-177dc1ab123e766ec3a-8000; Target topic = WSfc5bb05ff6a7c9ce-177dc1ab123e766ec3a-8000.htm-->Managing and Modifying Jobs – Web</a></span></span></li>
+         </ul>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

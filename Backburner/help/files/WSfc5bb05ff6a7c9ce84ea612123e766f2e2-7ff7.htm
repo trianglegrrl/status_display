@@ -1,0 +1,213 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Configuring Backburner Log Files</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Configuring Backburner Log Files">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff7.htm','d0e5512','index.html'); initPage('Configuring Backburner Log Files','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff7.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff7.htm" target="content" onClick="javascript:showInContents('d0e5512');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff7.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Verifying the Packet Size</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff8.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Troubleshooting Backburner</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Specifying Backburner Log File Contents</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff6.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm">Troubleshooting Backburner</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Configuring Backburner Log
+                  Files</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff7"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74a1"></a></span>Both Backburner Manager
+            and Backburner Server maintain log files. The information in these
+            log files can be useful when you are troubleshooting problems with
+            the Backburner network. For example, you can consult the files to
+            determine when the Backburner Manager or Server was started, when Backburner Servers
+            on a network were shut down, and whether any errors occurred that
+            halted the rendering of a job. 
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-749d"></a></span>The log files are stored
+            in <em class="mild">/usr/discreet/backburner/Network</em> on
+            Linux. On Windows, they are stored in a<em class="mild"> /backburner</em> subdirectory
+            of the per-user application data directory. For example, <em class="mild">C:\Documents
+               and Settings\&lt;user&gt;\Local SettingsApplication Data\backburner</em>,
+            in Windows XP.
+         </p>
+         <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-749c"></a></span><div class="note-note"><span class="label">Note</span>Running the Backburner Manager
+               or Backburner Server as a Windows service changes the location of
+               the <em class="mild">backburner.xml</em> and and log files
+               to <span class="filePath"> /backburner</span> subdirectories
+               of the per-user application data directory subdirectories belonging
+               to the <em class="mild">Local Service</em> user. These directories
+               are hidden to non-administrative level users. For example, on Windows
+               XP:
+            </div>
+         </div>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-749b"></a></span><span class="filePath">C:\Documents&nbsp;and&nbsp;Settings\Local Service\Local&nbsp;Settings\Application&nbsp;Data\backburner
+               \backburner.xml</span></p>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-749a"></a></span>You can adjust system
+            parameters and define the events and information that Backburner Manager
+            or Backburner Server records in its log file by editing the <span class="filePath">backburner.xml</span> file. Additionally,
+            on Windows systems you can adjust the log file settings through
+            an application dialog.
+         </p>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7499"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7498"></a></span>To configure Backburner log file settings
+            on Windows systems:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7497"></a></span>Start the Backburner Manager or Server.
+               Refer to the <em class="mild">Autodesk Backburner Installation Guide</em> for help
+               starting these applications.
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7496"></a></span><div class="note-note"><span class="label">Note</span>You cannot configure
+                     log file settings for Backburner Manager or Backburner Server while
+                     these applications are running as Windows services.
+                  </div>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7495"></a></span>From the Edit menu, choose Log Settings.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7494"></a></span>The Logging Properties
+                  dialog appears.
+               </p><span class="anchor_wrapper"><a name="WS73099cc142f4875532927b7f1241b571f20-6f4c"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_app_c_troubleshooting/ink_svg/bb_logging_properties.jpg"></p>
+               </div>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7492"></a></span>Use this dialog to set
+                  the events shown in the application's window or logged to its log
+                  file. 
+               </p>
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7491"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7490"></a></span>The Log To Screen options set events
+                     that are displayed in the Backburner Manager or Server application
+                     window.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-748f"></a></span>The Log To File options set events that
+                     are saved to the Backburner Manager or Server log files. These are
+                     usually the same messages that appear on the screen.
+                  </li>
+               </ul>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-748e"></a></span>Enable options in the dialog to determine
+               the messages that are saved to log files. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff6.htm">
+                        <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff6; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff6.htm-->Specifying Backburner Log File Contents</a></span></span>.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-748d"></a></span>By default, the following
+                  events are always logged to the screen and to the log files:
+               </p>
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-748c"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-748b"></a></span>Error
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-748a"></a></span>Warning
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7489"></a></span>Info
+                  </li>
+               </ul>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7488"></a></span>Enabled events are saved
+                  to the <span class="filePath">backburner.log</span> file
+                  for Backburner Manager and to the <span class="filePath">backburnerServer.log</span> file
+                  for Backburner Server.
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7487"></a></span>In the Buffer Limit field, specify the
+               maximum size of the buffer holding the messages.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7486"></a></span>Click Clear Log to clear the buffer holding
+               messages in the application window.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7485"></a></span>Click Clear Log File to clear the contents
+               of the <em class="mild">backburner.log</em> or <span class="filePath">backburnerServer.log</span> file.
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7484"></a></span><div class="note-note"><span class="label">Note</span>Log files are cleared
+                     only when you click the Clear Log File button. Otherwise, the size
+                     of these files continues to grow with each job rendered.
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7483"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7482"></a></span>To configure Backburner log file settings
+            by editing the backburner.xml file:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7481"></a></span>Stop Backburner Manager and/or Backburner Server.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7480"></a></span>Locate the <em class="mild">backburner.xml</em> file:
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-747f"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-747e"></a></span>Linux: <em class="mild">/usr/discreet/backburner/Network</em></li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-747d"></a></span>Windows: In the <em class="mild"> \backburner</em> subdirectory
+                     of the per-user application data directory. For example, <em class="mild">C:\Documents
+                        and Settings\&lt;user&gt;\Local SettingsApplication Data\backburner</em>,
+                     in Windows XP.
+                  </li>
+               </ul>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-747c"></a></span>Edit the <em class="mild">backburner.xml</em> file
+               using an XML or text editing application.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-747b"></a></span>Under the &lt;LogCfg&gt; heading, enable
+               or disable the options to determine the messages that are saved
+               to log files. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff6.htm">
+                        <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff6; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff6.htm-->Specifying Backburner Log File Contents</a></span></span>.
+               The settings are enabled with a “1” and disabled with a “0”.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-747a"></a></span>Save and exit the <em class="mild">backburner.xml</em> file.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7479"></a></span>Restart Backburner Manager or Backburner Server.
+               Refer to the <em class="mild">Autodesk Backburner Installation Guide</em> for
+               help starting these applications.
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7478"></a></span><div class="note-note"><span class="label">Note</span>Any changes made
+                     to the <span class="filePath">backburner.xml</span> file
+                     take effect only when the Backburner Manager or Backburner Server
+                     is restarted.
+                  </div>
+               </div>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7477"></a></span>The new log file settings
+                  take effect.
+               </p>
+            </li>
+         </ol>
+         <!---->
+         <div class="topic-list">
+            <h4 class="related">Topics in this section</h4>
+            <ul>
+               <li class="topiclist-litem"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff6.htm">Specifying Backburner Log File
+                     Contents</a></li>
+            </ul>
+         </div>
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

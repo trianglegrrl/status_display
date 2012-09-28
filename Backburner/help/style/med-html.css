@@ -1,0 +1,140 @@
+/* MED group will put customizations here for Browser Based HTML Help topic-page changes */
+
+body, div.body_content, table, td {
+	/*background: #ddd;*/
+	background-color: #fff;
+}
+
+a:hover {color: #000;}
+
+/* Added 2 April 08 Patricia - Giving breathing room for the zoom images */
+img.zoom {
+   margin: 0 5px 5px 0;
+}
+  /* added 6 April 08 Patricia adjust color background to blend with our coloring */
+div.codeBlock {
+background: #ddd;
+}
+span.keyboardEntry {
+font-family: "Courier New", Courier, monospace;
+font-size: 12pt;
+font-style: normal;
+font-weight: normal;
+}
+
+
+span.menuText{
+font-family: "Courier New", Courier, monospace;
+font-size: 12pt;
+font-style: normal;
+font-weight: bold;
+}
+
+
+span.keyCaps{
+font-style: normal;
+font-weight: bold;
+font-variant: small-caps;
+}
+
+div.note-note,
+div.note-tip,
+div.note-important,
+div.note-related,
+div.note-warning {
+  background: #cccccc;
+  padding: 10px 5px 10px 10px;
+}
+
+span.uis-unspecified {
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+/* added this for para in note aug 12 */
+
+div.note-note p,
+div.note-tip p,
+div.note-important p,
+div.note-related p,
+div.note-warning p {
+	background-color: #cccccc;
+}
+
+ol li table.ruled, ol li table.not-ruled {
+width: 97%;
+}
+
+/*  Added 2 April 08 Patricia fix narrow table in Disclaimer (believe only place not-ruled-wide is being used)    */
+table.not-ruled-wide {
+width: 97%;
+
+}
+
+/* Splash page rollovers - Patricia Sept 08  
+Peter added padding to outsideLinks */
+
+div.outsideLinks {
+	width: 300px;
+	float: right;
+        padding-top: 20px;
+}
+div.outsideLinks ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+div.outsideLinks li {
+	margin: 0 0 12px 0;;
+	padding: 0;
+}
+div.outsideLinks a {
+	display: block;
+	padding: 3px;
+	width: 280px;
+	color: #252525;
+	background: #ebebeb url(../images/arrow.gif) no-repeat 268px 5px;
+	text-decoration: none;
+}
+div.outsideLinks a:link {
+	color: #252525;
+	text-decoration: none;
+}
+div.outsideLinks a:hover {
+	background-color: #c1c1c1;
+	color: #252525;
+}
+
+/*  Splash Page  */
+
+div.splash_upper {
+	/*border-top: #000 3px solid;
+	border-bottom: #000 3px solid;
+	background: #ddd;*/
+	/*width: 100%;
+	min-width: 800px;*/
+	/*height: 500px;*/
+	display: block;
+	margin: 0 0 10px 0;
+}
+
+div.splash_upper table {
+	width: 97%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+div.splash_upper td {
+		padding: 10px;
+}
+div.splash_upper table p {
+	text-align: center;
+}
+div.splash_upper table img {
+	text-align: center;
+}
+div.splash_upper table a, table img {
+	border: none;
+}

@@ -1,0 +1,290 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Working with Server Groups</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Working with Server Groups">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ff8.htm','d0e2814','index.html'); initPage('Working with Server Groups','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ff8.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ff8.htm" target="content" onClick="javascript:showInContents('d0e2814');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ff8.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Setting Render Node Availability</div><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ff9.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Managing Render Nodes – Windows</div><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Backburner Web Monitor Reference</div><a href="WS73099cc142f48755-6aae5668123e144a987-7dee.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WS73099cc142f48755-6aae5668123e144a987-7df6.htm">Backburner Windows
+                  Monitor Reference</a>&nbsp;&gt;&nbsp;<a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-8000.htm">Managing Render Nodes – Windows</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Working with Server Groups</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ff8"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-3701"></a></span>A server group is a named collection
+            of render nodes that is treated, for the most part, as if it were
+            a single node. By default, jobs are submitted by creative applications
+            to the Backburner network as a whole. It is the Backburner Manager
+            that determines the specific render nodes to which they are sent, based
+            on job type and node availability. However, certain Autodesk applications
+            can be configured to submit jobs to a specific server group. 
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-36fb"></a></span>Server groups can be
+            used to implement a job-processing strategy. For example, consider
+            a facility with two Visual Effects and Finishing applications, and a
+            render farm consisting of eight Burn nodes, four of which are GPU-enabled. In
+            such a situation, you might create two server groups, one each for
+            the non-GPU and GPU-enabled Burn nodes. By assigning each Visual
+            Effects and Finishing workstation to a different server group, you
+            can reserve the GPU-enabled Burn nodes for the workstation with
+            higher priority or more demanding jobs.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-36fa"></a></span>It should be understood
+            that server groups do not restrict your ability to assign render
+            nodes to particular jobs as you see fit. When a creative application
+            is configured to submit its jobs to a server group, additional nodes
+            can be assigned to it, automatically, or manually, once the job
+            is on the network. Conversely, you can always remove individual
+            nodes from a job, regardless of their relationship to a server group.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7507"></a></span>Use
+            the following procedures to create or delete a named collection
+            of render nodes, called a <em class="mild">server group</em>, and to assign a
+            server group to a job.
+         </p>
+         <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7501"></a></span><div class="note-note"><span class="label">Note</span>Two kinds of server
+               groups can be created, <em class="mild">local</em> groups and <em class="mild">global</em> groups.
+               In almost all cases, you will want to create global server groups
+               only. Local groups serve a particular purpose for 3ds Max, under a
+               specific Backburner configuration. The configuration in question
+               has 3ds Max, the Backburner Manager, and the Backburner Monitor
+               all installed and running on the local machine. In this case, a
+               local group is a shortcut to a list of render nodes individually
+               selectable from within the 3ds Max application. In all other cases—and
+               for all other Autodesk applications—create global groups, as described
+               in this section.
+            </div>
+         </div>
+         <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7500"></a></span><div class="note-note"><span class="label">Note</span>For information on
+               configuring a creative application to submit jobs to a server group,
+               see the User Guide for the application of choice. To configure a
+               Visual Effects and Finishing application to submit its jobs to a
+               server group, set the optional <em class="mild">BackburnerManagerGroup</em> keyword
+               in the application's <em class="mild">init.cfg</em> file. See the <em class="mild">Burn
+                  Installation and User Guide</em>. For Smoke for Mac OS X,
+               this can be done in the Smoke Setup UI.
+            </div>
+         </div>
+         <div class="section"><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-1a50"></a></span><p class="section_title_h1"><a name="TOC_ENTRY__d0e2929"></a>Server Group Customization
+            </p>
+            <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-36f7"></a></span>Customizing server group
+               behaviour is made possible by way of two key options. First, you
+               can configure a server group to automatically make use of non-group
+               render nodes that are sitting idle. That is, when you have configured
+               the creative application to submit jobs to a named server group,
+               the Backburner Manager will send the job to any available non-group
+               render nodes too. Second, by default, the nodes in a server group
+               are available to all jobs submitted to the Backburner network. You
+               can configure a server group to give priority to the jobs submitted
+               to it specifically. Once configured, when the Backburner Manager
+               receives a job for a server group, non-group jobs are immediately
+               suspended, freeing up the nodes for the “server group” job.
+            </p>
+         </div>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74ff"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74fe"></a></span>To create a server group:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74fd"></a></span>Right-click All Servers in the server
+               list and choose Global Group from the popup menu.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74fc"></a></span>If the option is greyed-out,
+                  connect to a Backburner Manager, and then try again.
+               </p>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74fb"></a></span>The Server Group dialog
+                  appears.
+               </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-41e5"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_manage_nodes_win/ink_svg/QMServerGroupDialog.jpg"></p>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74f9"></a></span>Configure the behaviour of the group
+               as desired.<span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74f8"></a></span><div class="table_Ruled">
+                  <table cellpadding="0" cellspacing="0" class="ruled">
+                     <colgroup>
+                        <col style="width:1.673in">
+                        <col style="width:5.250in">
+                        <tr class="RuledHeading">
+                           <th class="table-heading">Item</th>
+                           <th class="table-heading">Description</th>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Name</td>
+                           <td class="table-body">The name of the server group as it will appear in the
+                              UI.
+                           </td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Weight</td>
+                           <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74f7"></a></span><p class="table-body">Adjusts the priority
+                                 of jobs assigned to the server group. 
+                              </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74f6"></a></span><p class="table-body">Jobs assigned to a high-weight
+                                 server group are given higher priority than jobs assigned to lower-weight
+                                 groups. In fact, a job assigned to a high-weight group may be rendered
+                                 ahead of non-group jobs—even if the non-group jobs have higher priorities
+                                 at the job level.
+                              </p>
+                           </td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Can Use Idle Non-group Servers </td>
+                           <td class="table-body">Enable to allow the Backburner Manager to temporarily
+                              assign idle non-group render nodes to the group. <span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74f5"></a></span><p class="table-body">Enabling this option
+                                 increases the rendering power of the group.
+                              </p>
+                           </td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Suspend Non-Current Group Jobs</td>
+                           <td class="table-body"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74f4"></a></span><p class="table-body">Enable to allow the Backburner
+                                 Manager to suspend the processing of non-group jobs running on group
+                                 nodes, when a new job is submitted specifically to the group.
+                              </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74f3"></a></span><p class="table-body">Enabling this option
+                                 allows a render node group to automatically switch from non-group
+                                 jobs to new group jobs.
+                              </p>
+                           </td>
+                        </tr>
+                     </colgroup>
+                  </table>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74f2"></a></span>Add render nodes to the group by selecting
+               them in the <em class="mild">Available</em> list and clicking Add.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74f1"></a></span>The render nodes are
+                  added to the group.
+               </p>
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74f0"></a></span><div class="note-tip"><span class="label">Tip</span>You can add render
+                     nodes directly from the Server list area by dragging and dropping
+                     them onto an already existing group.
+                  </div>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74ef"></a></span>Once you are satisfied with your choices,
+               click OK to commit the changes.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74ee"></a></span>The render node group
+                  is added to the Global Groups list.
+               </p>
+            </li>
+         </ol>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74ed"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74ec"></a></span>To assign a server group to a job:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74eb"></a></span>Select the job(s) of interest in the
+               Job list.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74ea"></a></span>In the Server list, right-click the server
+               group and choose Assign Group to Selected Jobs.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74e9"></a></span>The server group is assigned
+                  to the job.
+               </p>
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74e8"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74e7"></a></span>If nodes in the group are busy, they
+                     complete their currently-assigned jobs before working on the new
+                     job to which you have assigned them. Otherwise, they begin working
+                     on the new job immediately.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74e6"></a></span>If the “Suspend current non-group jobs”
+                     option is enabled for the group, all nodes in the Server group drop
+                     their current rendering job and begin processing the assigned job
+                     immediately.
+                  </li>
+               </ul>
+            </li>
+         </ol>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74e5"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74e4"></a></span>To shift a server group between two jobs:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74e3"></a></span>Select all jobs in the Job list.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74e2"></a></span>In the Global Groups list, right-click
+               the render node group to be reassigned and choose Remove Group From
+               Selected Jobs.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74e1"></a></span>Each render node in the
+                  group ends its current assignment and becomes available for other
+                  jobs. If <em class="mild">Suspend current non-group jobs</em> option
+                  is enabled for the group, the jobs are dropped immediately.
+               </p>
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74e0"></a></span><div class="note-note"><span class="label">Note</span>Server groups are
+                     subject to the same job assignment and completion rules and restrictions
+                     as individual render nodes. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffb.htm">
+                              <!--Reference = WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffb; Target topic = WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffb.htm-->Shifting Nodes Between Jobs</a></span></span>.
+                  </div>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74df"></a></span>In the Job list, select the job to which
+               you want to assign the group.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74de"></a></span>In the Server list, right-click the server
+               group and choose Assign Group to Selected Jobs.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74dd"></a></span>The render node group
+                  is assigned to the new job and begins rendering. 
+               </p>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74dc"></a></span>If <em class="mild">Can use idle non-group
+                     servers</em> is enabled for the group, the Backburner Manager
+                  adds nodes to the group temporarily, as they become available from
+                  other jobs. 
+               </p>
+            </li>
+         </ol>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74db"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74da"></a></span>To delete a server group:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74d9"></a></span>In the Global Groups list, right-click
+               the render node group of interest and choose Delete Group.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74d8"></a></span>When prompted to confirm your action,
+               click Yes.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74d7"></a></span>The group is deleted
+                  from the Server list. The render nodes themselves remain untouched,
+                  and can be assigned to other groups, as needed. 
+               </p>
+            </li>
+         </ol>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

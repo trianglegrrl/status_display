@@ -1,0 +1,190 @@
+/* allows for customization of panel pages */
+
+body, p, td, input, textarea, select {
+   font-family: Verdana, Arial; 
+	font-size: 8pt;
+  /* background:#ddd;*/
+}
+.content_htmlbody {
+	/*background:#ddd;*/
+}
+.index_htmlbody {
+	margin: 0pt; 
+	/*background:#ddd;*/
+}
+.search_htmlbody {
+	margin: 0pt; 
+	/*background:#ddd;*/
+}
+.contentTable {
+	background: #ddd; 
+	/*width: 100%; 
+	height: 100%;*/
+}
+/* Panel Icon */
+.book-title {
+   display: none;
+}
+.book-title__row {
+    height: 70px;
+    background-image: url(../images/Panel_Icon.png);
+    background-repeat: no-repeat;
+    background-color: black;
+}
+/* following line is necessary for IE to get space for the sig image*/
+tr.book-title__row td {
+	height: 71px;
+}
+
+/* These are used for Contents and Index:
+   from indexes.css and contents.css
+   00289C is the dk blue, 7B8EB5 is the light blue
+*/
+a:link, a:active, a:visited {color: #00289C; text-decoration: none;}
+a:hover {color: black; text-decoration: underline;}
+
+/* Favorites remove link */
+.navigationLink:hover {
+	color: #000;
+}
+
+a.favoritesLink, a.favoritesLink:visited {
+    color: #00289C;
+}
+
+a.favoritesLink:hover, a.favoritesLink.normalLink:hover, a.favoritesLink.selectedLink:hover {
+    background: #ccc;
+	 color: #000; 
+	 text-decoration: underline;
+}
+
+/* TOC classes from commons - add one pixel top bottom */
+.topic_opened_toc_image, .topic_closed_toc_image, .topic_toc_image  {
+	padding:2px 10px;
+	height:14px;
+}
+/* Now the indexes.css changes: */
+
+.index__letter_group {background-color: #aaaaaa; font-weight: bold; color: white; margin-bottom: 5pt; margin-top: 5pt; padding-left: 2pt;}
+
+.index_entry {color: black;}
+
+.index_entry__content {margin-left: 0.25in;}
+
+
+/* Index Changes Sept 16 2008 :  These modifications go along with changes for 'removal of index links on primaries' and 'switch of See/SeeAlso links to be searchable'.
+
+1.                                                                      regular/unhiglighted            highlighted                                Hover
+primaries (w/o secondaries) and secondaries that are links use:
+index__entry_text                                                       blue, no-underline              white, lt-blue bgcolor, no-underline       YES hover underline all 3
+2.
+All primaries (w/ secondaries) now have no link, and they use:
+index_indents                                                           black, no-underline             white, lt-blue bgcolor, no-underline       no hover ever
+3.
+primaries (w/o secondaries) and secondaries that are NOT links use:
+index__entry_text_see                                                   black, no-underline             white, lt-blue bgcolor, no-underline       no hover ever
+*/
+
+/* 1. This is for all index entries that are links,
+Do regular, unlightlighted (those 2 same) + highlighted */
+
+/* .index__entry_text {color: black; text-decoration: none;} */
+
+.index__entry_text a:link,
+.index__entry_text a:active,
+.index__entry_text a:visited {color: #00289C; text-decoration: none;}
+.index__entry_text a:hover {color: black; text-decoration: underline;}
+
+.index__entry_text a.unhighlighted:link,
+.index__entry_text a.unhighlighted:active,
+.index__entry_text a.unhighlighted:visited {color: #00289C; text-decoration: none;}
+.index__entry_text a.unhighlighted:hover {color: black; text-decoration: underline;}
+
+.index__entry_text a.highlighted:link,
+.index__entry_text a.highlighted:active,
+.index__entry_text a.highlighted:visited {color: white; background-color: #7B8EB5; text-decoration: none;}
+.index__entry_text a.highlighted:hover {color: white; background-color: #7B8EB5; text-decoration: underline;}
+
+/* 2. This is for all primaries (w/ secondaries). (They now have no link. Still searchable.)
+Do regular, unlightlighted (those 2 same) + highlighted */
+
+.index_indents {color: black; font-style: normal;}         /* normal added to override the italics in indexes.css, all three cases */
+
+.index_indents a:link,
+.index_indents a:active,
+.index_indents a:visited,
+.index_indents a:hover {color: black; text-decoration: none; cursor: default;}
+
+.index_indents a.unhighlighted:link,
+.index_indents a.unhighlighted:active,
+.index_indents a.unhighlighted:visited,
+.index_indents a.unhighlighted:hover {color: black; text-decoration: none; cursor: default;}
+
+.index_indents a.highlighted:link,
+.index_indents a.highlighted:active,
+.index_indents a.highlighted:visited,
+.index_indents a.highlighted:hover {color: white; background-color: #7B8EB5; text-decoration: none; cursor: default;}
+
+/* 3. This is for primaries (w/o secondaries) and secondaries that are NOT links. (They are now dead links, so searchable)
+Do regular, unlightlighted (those 2 same) + highlighted
+
+Note this is a NEW class that is not in standard html help. */
+
+.index__entry_text_see a:link,
+.index__entry_text_see a:active,
+.index__entry_text_see a:visited,
+.index__entry_text_see a:hover {color: black; text-decoration: none; cursor: default;}
+
+.index__entry_text_see a.unhighlighted:link,
+.index__entry_text_see a.unhighlighted:active,
+.index__entry_text_see a.unhighlighted:visited,
+.index__entry_text_see a.unhighlighted:hover {color: black; text-decoration: none; cursor: default;}
+
+.index__entry_text_see a.highlighted:link,
+.index__entry_text_see a.highlighted:active,
+.index__entry_text_see a.highlighted:visited,
+.index__entry_text_see a.highlighted:hover {color: white; background-color: #7B8EB5; text-decoration: none; cursor: default;}
+
+/* Change for Index/Search customization - overrides Align Left in search.css and indexes.css */
+
+.searchPhrase {text-align: left; font-weight:bold;}
+
+/* Search Tip link */
+.searchPhrase a {
+  font-weight: normal;
+}
+
+.moveover {
+	padding-left:82px;
+}
+
+/* End of Index Changes */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

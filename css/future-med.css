@@ -1,0 +1,260 @@
+/* 
+    Document   : future-med
+    Created on : Jan 23, 2012, 2:45:22 PM
+    Author     : RahulC
+    Description: Styles for the pages        
+*/
+/*
+.x-toolbar {
+    background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#0a5981), to(#053852), color-stop(.6,#08496b));    
+}
+
+.x-toolbar .x-button, .x-toolbar .x-button.x-button-back:after, .x-toolbar .x-button.x-button-forward:after {
+    background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#0a5981), to(#053852), color-stop(.6,#08496b));   
+}*/
+
+@font-face
+{
+    font-family: calibri;
+    src: url('fonts/calibri.ttf');
+}
+
+body{
+    font-family: calibri;
+}
+
+.avatar{
+    background-color: #EEE;
+    background-position: center center;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0;
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    background-size: 63px auto;
+}
+
+.x-list-item-body {
+    display: -webkit-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-align: center;
+    box-align: center;
+}
+
+.x-list .x-list-item.x-item-selected {
+    background-color: #06346A;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #167bf3), color-stop(2%, #07448c), color-stop(100%, #042348));
+    background-image: -webkit-linear-gradient(#167bf3,#07448c 2%,#042348);    
+}
+
+.title{
+    display: -webkit-box;
+    display: box;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.subHeading{
+    color: #999;
+}
+
+.header{
+    font-weight: bold; 
+}
+
+.headerDetail{
+    font-weight: bold; 
+    font-size: 22px;
+}
+
+.avatarBig{
+    background-color: #EEE;
+    background-position: center center;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0;
+    margin-right: 10px;
+    width: 145px;
+    height: 145px;
+    background-size: 47px auto;
+}
+
+.avatarBig img{
+    width: 145px;
+    height: 145px;
+}
+
+.details{
+    display: -webkit-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-align: center;
+    box-align: center;
+}
+
+.bio{
+    margin-top: 20px;
+}
+
+.x-button{
+    background: transparent;
+    border: 0em solid #999;
+    -webkit-box-shadow: inset #ffffff 0 0 0em, rgba(255, 255, 255, 0.25) 0 0em 0;
+}
+
+.x-button.x-button-pressed, .x-button.x-button-active {
+    background: transparent;
+    -webkit-box-shadow: inset #ffffff 0 0 0.5em, rgba(255, 255, 255, 0.25) 0 0.1em 0;
+}
+
+.iconSize{
+    width: 60px;
+    height: 60px;
+    border-bottom-left-radius: 0em 0em;
+    border-bottom-right-radius: 0em 0em;
+    border-top-left-radius: 0em 0em;
+    border-top-right-radius: 0em 0em;
+
+}
+
+.schedule{
+    background-image: url('../images/icons/schedule-1.png'); 
+    width: 60px;
+    height: 65px;
+}
+
+.schedule.x-button-pressed, .x-button-active {
+    background-image: url('../images/icons/schedule-2.png');
+    width: 60px;
+    height: 65px;
+}
+
+.faculties{
+    background-image: url('../images/icons/faculties-1.png');
+    width: 60px;
+    height: 67px;
+}
+
+.faculties.x-button-pressed, .x-button-active {
+    background-image: url('../images/icons/faculties-2.png');
+    width: 60px;
+    height: 67px;
+}
+
+.participants{
+    background-image: url('../images/icons/participants-1.png');
+    width: 60px;
+    height: 67px;
+}
+
+.participants.x-button-pressed, .x-button-active {
+    background-image: url('../images/icons/participants-2.png');
+    width: 60px;
+    height: 67px;
+}
+
+.feedBack{
+    background-image: url('../images/icons/feedBack-1.png');
+    width: 60px;
+    height: 65px;
+}
+
+.feedBack.x-button-pressed, .x-button-active {
+    background-image: url('../images/icons/feedBack-2.png');
+    width: 60px;
+    height: 65px;
+}
+
+.about{
+    background-image: url('../images/icons/about-1.png');
+    width: 60px;
+    height: 64px;
+}
+
+.about.x-button-pressed, .x-button-active {
+    background-image: url('../images/icons/about-2.png');
+    width: 60px;
+    height: 64px;
+}
+
+.social{
+    background-image: url('../images/icons/social-1.png');
+    width: 71px;
+    height: 64px;
+}
+
+.social.x-button-pressed, .x-button-active {
+    background-image: url('../images/icons/social-2.png');
+    width: 71px;
+    height: 64px;
+}
+
+.tracks{
+    background-image: url('../images/icons/tracks-1.png');
+    width: 61px;
+    height: 64px;
+}
+
+.tracks.x-button-pressed, .x-button-active {
+    background-image: url('../images/icons/tracks-2.png');
+    width: 61px;
+    height: 64px;
+}
+
+.videos{
+    background-image: url('../images/icons/video-1.png');
+    width: 61px;
+    height: 64px;
+}
+
+.videos.x-button-pressed, .x-button-active {
+    background-image: url('../images/icons/video-2.png');
+    width: 61px;
+    height: 64px;
+}
+
+.panel-bg{
+    background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#07457f), to(#07457f), color-stop(.6,#07457f));
+}
+
+.tweet{
+    display:block;
+    -webkit-box-flex:1;
+    box-flex:1;
+}
+
+.floatLeft{
+    margin-left: -120px;
+    height: 40px;
+    margin-top: 4px;
+}
+
+.floatTop{
+    margin-top: -60px;
+    margin-left: 30px;
+}
+
+.tabs span{
+    height: 42px;
+    line-height: 39px;
+    font-size: 20px;
+}
+
+.x-tabbar.x-docked-bottom .x-tab .x-button-label, .x-tabbar.x-docked-bottom .x-tab .x-hasbadge .x-badge, .x-hasbadge .x-tabbar.x-docked-bottom .x-tab .x-badge {
+    margin: 0;
+    line-height: 39px;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.x-html h2 {
+    font-size: 2em;
+    margin-bottom: 0.15em;
+}

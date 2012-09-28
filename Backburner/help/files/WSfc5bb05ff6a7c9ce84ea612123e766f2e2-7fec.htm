@@ -1,0 +1,153 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Adjusting the Maximum Number of Render Nodes Per Job</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Adjusting the Maximum Number of Render Nodes Per Job">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fec.htm','d0e6200','index.html'); initPage('Adjusting the Maximum Number of Render Nodes Per Job','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fec.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fec.htm" target="content" onClick="javascript:showInContents('d0e6200');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fec.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Resolving a Render Node Failure</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fed.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Troubleshooting Backburner</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><img src="./../images/nav-null-xp.gif" border="0"></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm">Troubleshooting Backburner</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Adjusting the Maximum Number
+                  of Render Nodes Per Job</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fec"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73ce"></a></span>When
+            the maximum number of render nodes per job is reached, no additional
+            render nodes can be assigned to a job, even if render nodes are
+            available. You can remedy this problem by adjusting the settings
+            for the Maximum Concurrent Assignments and Maximum Servers per Job
+            in Backburner Manager. You can do this by editing the <span class="filePath">backburner.xml</span> file. Additionally,
+            on Windows systems you can use the Backburner Manager General Properties
+            dialog.
+         </p>
+         <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73c8"></a></span><div class="note-note"><span class="label">Note</span>Changing these settings
+               is not recommended. Increase these values only if you are sure that
+               there is sufficient slack in your Backburner network.
+            </div>
+         </div>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73c7"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73c6"></a></span>To adjust the number of render nodes
+            per job on Windows systems:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73c5"></a></span>In Backburner Manager, from the Edit
+               menu, choose General Settings.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73c4"></a></span>The Backburner Manager
+                  General Properties dialog appears.
+               </p><span class="anchor_wrapper"><a name="WS73099cc142f4875532927b7f1241b571f20-6f4b"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_app_c_troubleshooting/ink_svg/bbManagerGenProp.jpg"></p>
+               </div>
+               <div style="margin-top:9pt"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73c2"></a></span><div class="note-note"><span class="label">Note</span>Changing these settings
+                     is not recommended. Increase these values only if you are sure that
+                     there is sufficient slack in your Backburner network.
+                  </div>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73c1"></a></span>In the General group, adjust the value
+               for Max Concurrent Assignments.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73c0"></a></span>Optionally, in the General group, select
+               Use Server Limit and adjust the value for Max Servers per Job.
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73bf"></a></span><div class="note-note"><span class="label">Note</span>The settings from
+                     the Backburner Manager General Properties dialog are also written
+                     to the <span class="filePath">backburner.xml</span> file
+                     in the <span class="filePath">Network</span> folder where
+                     you installed Backburner. 
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73be"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73bd"></a></span>To adjust the number of render nodes
+            by editing the <span class="filePath">backburner.xml</span> file:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73bc"></a></span>Stop Backburner Manager.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73bb"></a></span>Locate the <em class="mild">backburner.xml</em> file:
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73ba"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73b9"></a></span>Linux: <em class="mild">/usr/discreet/backburner/Network</em></li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73b8"></a></span>In the <em class="mild"> \backburner</em> subdirectory
+                     of the per-user application data directory. For example, <em class="mild">C:\Documents
+                        and Settings\&lt;user&gt;\Local SettingsApplication Data\backburner</em>,
+                     in Windows XP.
+                  </li>
+               </ul>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73b7"></a></span>Edit the <em class="mild">backburner.xml</em> file
+               using an XML or text editing application.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73b6"></a></span>Under &lt;ManagerSettings&gt;, adjust
+               the value for &lt;MaxConcurrentAssignments&gt;.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73b5"></a></span>Optionally, set &lt;UseServerLimit&gt;
+               to “Yes”, and adjust the value for &lt;ServerLimit&gt;.
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73b4"></a></span><div class="note-note"><span class="label">Note</span>Changing these settings
+                     is not recommended. Increase these values only if you are sure that
+                     there is sufficient slack in your Backburner network.
+                  </div>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73b3"></a></span>Save and exit the <em class="mild">backburner.xml</em> file.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73b2"></a></span>Restart Backburner Manager. Refer to
+               the <em class="mild">Autodesk Backburner Installation Guide</em> for help
+               starting Backburner Manager.
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73b1"></a></span><div class="note-note"><span class="label">Note</span>Any changes made
+                     to the <span class="filePath">backburner.xml</span> file
+                     take effect only when the Backburner Manager is restarted.
+                  </div>
+               </div>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-73b0"></a></span>The new render node settings
+                  take effect.
+               </p>
+            </li>
+         </ol>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

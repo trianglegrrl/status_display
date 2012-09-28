@@ -1,0 +1,138 @@
+body{
+	background-color: #404040;
+	margin: 10px 10px 10px 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;	
+	color: #C8C8C8;
+}
+
+a.tLink:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #C8C8C8;
+}
+
+a.tLink{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;	
+	color: #808080;
+}
+
+a.tSLink:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #D3BC16;
+}
+
+a.tSLink{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #C8C8C8;
+}
+
+table.jNav a { 
+	height: 16px;
+	z-index: 5;	
+	width:100px; 
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	border-bottom: 1px solid #000000; 
+	display: block; 
+}
+
+div.jNav a{
+	color: #C8C8C8; 
+	background: #343F55 url(../images/btnH_fill.gif); 
+	text-decoration:none; 
+	font-size:12px; 
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 2px 2px;
+}
+
+div.jNav a:link {
+color: #C8C8C8;
+}
+
+div.jNav a:hover {
+	color: #D3BC16;
+	background-image: url(../images/btn_fill.gif); 
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	border-bottom: 1px solid #000000;  
+}
+
+#content2{
+	border: 1px #000 solid;
+	border-top:5px #000 solid;
+	width:100%;
+	height:100%;
+}
+
+.tabs{
+	position: absolute;
+	height: 20px;
+}
+
+.login{
+	position: absolute;
+	top:82px;
+	right:10px;
+	left: auto;
+}
+
+.bannerContainer{
+	border: 1px #000 solid;
+	height: 60px;
+}
+
+.tabContainer{
+	height: 40px;
+}
+
+.contentFrame{
+	width: 100%;
+	height: 90%;
+}
+
+.tabBGH{
+	background-image: url(../images/tabH_fill.gif);
+	background-repeat: repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #C8C8C8;
+}
+
+.tabBG{
+	background-image: url(../images/tab_fill.gif);
+	background-color:  #404040;
+	background-repeat: repeat-x;
+	border-bottom: 1px #000000 solid;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.navFrame {
+	background-color: #212121;
+	border-bottom: 1px solid #000;
+	height: 1%;
+}
+
+.version {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #C8C8C8;
+}

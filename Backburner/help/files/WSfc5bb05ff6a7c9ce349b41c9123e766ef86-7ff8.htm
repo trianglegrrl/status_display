@@ -1,0 +1,186 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Working with Server Groups</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Working with Server Groups">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8.htm','d0e4329','index.html'); initPage('Working with Server Groups','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8.htm" target="content" onClick="javascript:showInContents('d0e4329');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Setting Render Node Availability</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff9.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Managing Render Nodes – Web</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Modifying Manager Settings</div><a href="WS1a9193826455f5ff-75c1f7c3124f51ccbd1-1412.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WS73099cc142f48755-6aae5668123e144a987-7dee.htm">Backburner Web Monitor
+                  Reference</a>&nbsp;&gt;&nbsp;<a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-8000.htm">Managing Render Nodes – Web</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Working with Server Groups</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-3701"></a></span>A server group is a named collection
+            of render nodes that is treated, for the most part, as if it were
+            a single node. By default, jobs are submitted by creative applications
+            to the Backburner network as a whole. It is the Backburner Manager
+            that determines the specific render nodes to which they are sent, based
+            on job type and node availability. However, certain Autodesk applications
+            can be configured to submit jobs to a specific server group. 
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-36fb"></a></span>Server groups can be
+            used to implement a job-processing strategy. For example, consider
+            a facility with two Visual Effects and Finishing applications, and a
+            render farm consisting of eight Burn nodes, four of which are GPU-enabled. In
+            such a situation, you might create two server groups, one each for
+            the non-GPU and GPU-enabled Burn nodes. By assigning each Visual
+            Effects and Finishing workstation to a different server group, you
+            can reserve the GPU-enabled Burn nodes for the workstation with
+            higher priority or more demanding jobs.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-36fa"></a></span>It should be understood
+            that server groups do not restrict your ability to assign render
+            nodes to particular jobs as you see fit. When a creative application
+            is configured to submit its jobs to a server group, additional nodes
+            can be assigned to it, automatically, or manually, once the job
+            is on the network. Conversely, you can always remove individual
+            nodes from a job, regardless of their relationship to a server group.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-759f"></a></span>Use
+            the following procedures to create or delete a named collection
+            of render nodes, called a <em class="mild">server group</em>, and to assign a
+            server group to a job.
+         </p>
+         <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-759a"></a></span><div class="note-note"><span class="label">Note</span>For information on
+               configuring a creative application to submit jobs to a server group,
+               see the User Guide for the application of choice. To configure a
+               Visual Effects and Finishing application to submit its jobs to a
+               server group, set the optional <em class="mild">BackburnerManagerGroup</em> keyword
+               in the application's <em class="mild">init.cfg</em> file. See the <em class="mild">Burn
+                  Installation and User Guide</em>. For Smoke for Mac OS X,
+               this can be done in the Smoke Setup UI.
+            </div>
+         </div>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7599"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7598"></a></span>To create a server group:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7597"></a></span>On the Server Groups tab, click the Create
+               button. 
+               <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-1e9f"></a></span>The Create Server Group
+                  dialog appears.
+               </p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-1e9e"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_manage_nodes_web/ink_svg/BB_WebMonServGrp.jpg"></p>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-35b7"></a></span>Enter a name for the new server group
+               in the Group Name field.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-758c"></a></span>Add render nodes to the group by selecting
+               them in the <em class="mild">Available Servers </em>list and moving
+               them to the <em class="mild">Servers in Group</em> list.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-758a"></a></span>Once you are satisfied with your choices,
+               click OK to commit the changes.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7589"></a></span>The new server group
+                  is added to the list.
+               </p>
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7587"></a></span><div class="note-note"><span class="label">Note</span>Server groups you
+                     create in the Backburner Web Monitor appear as <em class="mild">global</em> groups
+                     in Backburner Windows Monitor.
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7586"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7585"></a></span>To assign a server group to a job:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7584"></a></span>On the Jobs tab, select the job of interest
+               and choose Settings from the Action menu, or double-click the job.
+               <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-35b6"></a></span>The Job Details page
+                  appears.
+               </p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-15b5"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_manage_jobs_web/ink_svg/BB_WebMonJobDetails.jpg"></p>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-15b4"></a></span>In the Job Details page, click on the
+               Server Assignment tab.<span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-15b3"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_manage_nodes_web/ink_svg/BB_WebMonServerAssigTab.jpg"></p>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7580"></a></span>Choose a server group from the Assigned
+               Server Group menu.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-757d"></a></span>Apply your changes, then click Refresh
+               to update the display.
+               <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-15b2"></a></span>Compatible servers belonging
+                  to the group appear in the Assigned Servers list. 
+               </p>
+               <div><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-14d3"></a></span><div class="note-note"><span class="label">Note</span>If an expected server
+                     belonging to the chosen group does not appear in the list, it can
+                     indicate the server is <em class="mild">absent</em>, or does not have the correct
+                     adapter installed. The manager will only assign servers that are
+                     able to carry out the job.
+                  </div>
+               </div>
+               <div><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-35b5"></a></span><div class="note-note"><span class="label">Note</span>Changed settings
+                     apply to new tasks only. Completed tasks are not reprocessed. To
+                     reprocess completed tasks, restart the job from the beginning. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce-177dc1ab123e766ec3a-7ffa.htm">
+                              <!--Reference = WSfc5bb05ff6a7c9ce-177dc1ab123e766ec3a-7ffa; Target topic = WSfc5bb05ff6a7c9ce-177dc1ab123e766ec3a-7ffa.htm-->Restarting Jobs</a></span></span>.
+                  </div>
+               </div>
+            </li>
+         </ol>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7577"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7576"></a></span>To delete a server group:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7575"></a></span>On the Server Groups tab, select the
+               server group of interest and click the Delete button.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7574"></a></span>When prompted to confirm your action,
+               click OK.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7573"></a></span>The selected server group
+                  is deleted.
+               </p>
+            </li>
+         </ol>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

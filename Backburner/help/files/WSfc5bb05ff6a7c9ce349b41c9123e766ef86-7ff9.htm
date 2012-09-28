@@ -1,0 +1,130 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Setting Render Node Availability</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Setting Render Node Availability">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff9.htm','d0e4264','index.html'); initPage('Setting Render Node Availability','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff9.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff9.htm" target="content" onClick="javascript:showInContents('d0e4264');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff9.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Deleting Offline Render Nodes</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ffa.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Managing Render Nodes – Web</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Working with Server Groups</div><a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff8.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WS73099cc142f48755-6aae5668123e144a987-7dee.htm">Backburner Web Monitor
+                  Reference</a>&nbsp;&gt;&nbsp;<a href="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-8000.htm">Managing Render Nodes – Web</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Setting Render Node Availability</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce349b41c9123e766ef86-7ff9"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-3707"></a></span>By
+            default, nodes are always available for processing. However, you
+            can easily limit render node availability in order to manage network
+            resources. For some creative applications, such as 3ds Max and Maya,
+            creative seats themselves can be set up as render nodes. In such
+            cases, it can be helpful to limit rendering activity on those workstations
+            to after hours. 
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8-3704"></a></span>For others, such as the
+            Visual Effects and Finishing applications (including Smoke for Mac
+            OS X), render nodes are always separate workstations. Nevertheless,
+            scheduling can be useful. Burn nodes, for example, require access
+            to the full-resolution versions of the frames needing processing.
+            This can result in a great deal of data moving across the network.
+            Scheduling some Burn nodes for only off-peak availability can assist
+            in balancing network traffic levels until a more permanent network
+            solution is put in place.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75b1"></a></span></p>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75af"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75ae"></a></span>To schedule the availability of a render node:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75ad"></a></span>On the Servers tab, select a node of
+               interest and click the Settings button. Alternately, double-click
+               the node of interest.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75ac"></a></span>The Server Details page
+                  appears. 
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75ab"></a></span>In the Server Details page, click the
+               Weekly Schedule tab.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75a9"></a></span>The schedule for the
+                  render node appears. 
+               </p><span class="anchor_wrapper"><a name="WS73099cc142f4875532927b7f1241b571f20-6f1e"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_manage_nodes_web/ink_svg/BB_WebMonSchedule.jpg"></p>
+               </div>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7515"></a></span>Periods of time that
+                  are green indicate the node is available to process jobs. By default,
+                  nodes are always available.
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75a7"></a></span>Toggle render node availability as desired:
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7513"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7512"></a></span>Toggle a single hour by clicking the
+                     hour of interest.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7511"></a></span>Toggle 	the same hour for each day with
+                     one click using the hour buttons.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7510"></a></span>Click and drag to toggle a number of
+                     hours at once.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-750f"></a></span>Toggle a whole day using the days-of-the-week
+                     buttons.
+                  </li>
+               </ul>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75a2"></a></span>The following schedule
+                  shows a render node that is available weeknights and 24 hours a
+                  day on weekends. This might be the case for a creative workstation
+                  used as a render node after-hours, for example.
+               </p><span class="anchor_wrapper"><a name="WS73099cc142f4875532927b7f1241b571f20-6f1d"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_manage_nodes_web/ink_svg/BB_WebMonScheduleSamp.jpg"></p>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-75a0"></a></span>Apply your changes.
+            </li>
+         </ol>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

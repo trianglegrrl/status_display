@@ -1,0 +1,189 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Resolving a Problem Connecting to the Backburner Manager</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Resolving a Problem Connecting to the Backburner Manager">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff2.htm','d0e5871','index.html'); initPage('Resolving a Problem Connecting to the Backburner Manager','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff2.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff2.htm" target="content" onClick="javascript:showInContents('d0e5871');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff2.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Resolving Invalid DNS Addresses</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff3.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Troubleshooting Backburner</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Adding the Backburner Path to the Windows Path Environment Variable</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff1.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm">Troubleshooting Backburner</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Resolving a Problem Connecting
+                  to the Backburner Manager</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff2"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7433"></a></span>The Backburner Manager, on
+            Linux or Windows systems, is the link between the Render Clients
+            who submit jobs and the render nodes that process these jobs. If
+            the Backburner Manager is not available, jobs cannot be submitted
+            to or processed by Backburner. Not being able to connect to the Backburner Manager
+            causes problems for both Render Clients and nodes, but Render Clients
+            usually discover the problem. For example, if you submit a job while
+            the Manager is down, an error appears in your application.
+         </p>
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7431"></a></span>The most common reasons
+            for not being able to connect to the Backburner Manager are:
+         </p>
+         <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7430"></a></span><ul>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-742f"></a></span>An incorrect IP address or an IP address
+               that connects to the wrong Backburner Manager
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-742e"></a></span>A Backburner Manager that is not running
+               or is hung
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-742d"></a></span>Communication problems between the Backburner Manager
+               and the render nodes
+            </li>
+         </ul>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-742c"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-742b"></a></span>To resolve a problem connecting to the Backburner Manager:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-742a"></a></span>Ensure you are connecting to the correct Backburner Manager,
+               using its correct IP address, as follows. 
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7429"></a></span>Connect the application
+                  directly to the Backburner Manager workstation by trying the following:
+               </p>
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7428"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7427"></a></span>If you use the Auto-Connect functionality,
+                     disable the Use First Available option and/or remove the subnet
+                     mask for the Backburner network. You are prompted to enter the name
+                     or IP address of the Backburner Manager workstation when you try
+                     to submit a job to the Backburner.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7426"></a></span>Disable any settings or preferences that
+                     automatically connect to the Backburner Manager. 
+                  </li>
+               </ul>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7425"></a></span>If the application cannot
+                  connect to the Backburner Manager, continue to the next step.
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7424"></a></span>Verify that the Backburner Manager is
+               running. 
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7423"></a></span>If it is not running
+                  or appears to be inactive on the workstation, restart the Manager
+                  for the network. Refer to the <em class="mild">Autodesk Backburner Installation
+                     Guide</em> for help starting Backburner Manager.
+               </p>
+               <div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7422"></a></span><div class="note-note"><span class="label">Note</span>If you are running Backburner Manager
+                     as a Windows Service, display the Services control panel, and verify
+                     that the Manager service is running. If the service is not running,
+                     highlight it and click Start.
+                  </div>
+               </div>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7421"></a></span>If restarting the Manager
+                  does not fix the problem, continue to the next step. 
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7420"></a></span>If a render node has more than one network
+               interface, these problem may be that the Backburner Server running
+               on that node is identifying itself to the Backburner Manager using
+               the wrong IP address. Do one of the following on the node to specify
+               the IP address the Backburner Server uses to identify itself to
+               the Backburner Manager:
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-741f"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-741e"></a></span>(Windows render node) Stop the Backburner Server
+                     on the node, and the Backburner Manager. On the render node, from
+                     the Start menu, choose Programs, Autodesk, Backburner, then server
+                     to open the Backburner Server General Properties dialog and in the
+                     Server Name or IP Address field, enter the name or IP address you
+                     want to associate with the Backburner Server. Restart the Backburner Manager and
+                     the Backburner Server. 
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-741d"></a></span>(Windows or Linux render node) Stop the Backburner Server
+                     on the node, and the Backburner Manager. Load the <em class="mild">/usr/discreet/backburner/Network/backburner.xml</em> file
+                     in an XML editor or text editor and edit the <span class="keyboardEntry">&lt;SystemConfiguration&gt;/&lt;AppDetails&gt;/&lt;ServerSettings&gt;/&lt;ServerName&gt;</span> values
+                     to reflect the host name or IP address you want to associate with
+                     the Backburner Server. Save and close the file, then restart the Backburner Manager
+                     and the Backburner Server. 
+                  </li>
+               </ul>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-741c"></a></span>Ensure the render nodes can <em class="mild">ping</em> the Backburner Manager.
+               For help with the <em class="mild">ping</em> command, see <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm">
+                        <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm-->Verifying Communication Between Two Hosts</a></span></span>.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-741b"></a></span>If the render nodes can
+                  successfully <em class="mild">ping</em> the Backburner Manager,
+                  continue to the next step. 
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-741a"></a></span>If a firewall is running on Backburner components, review
+               the firewall settings for each network component to ensure the following:
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7419"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7418"></a></span>The Backburner application(s) are allowed
+                     to access the network.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7417"></a></span>The ports used by the Backburner Manager
+                     and the Backburner Monitor to communicate are not blocked by the firewall.
+                     By default, these ports are 3233 and 3234.
+                  </li>
+               </ul>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7416"></a></span>Configure the log files to report detailed
+               information about TCP/IP packets, as follows.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7415"></a></span>Enable the Log Debug
+                  and Log Debug Extended options in the preferences for the Manager
+                  and all render nodes running Backburner Server, and then restart
+                  the Backburner Manager and Backburner Server workstations. 
+               </p>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7414"></a></span>Examine the TCP/IP information
+                  in the log files to determine why the Backburner Manager workstation
+                  and render nodes are not communicating. 
+               </p>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7413"></a></span>Examine the<span class="filePath"> backburner.xml</span> file
+               to ensure that the subnet mask defined for the Backburner Manager
+               is correct and matches the subnet mask defined for the render node's TCP/IP
+               settings. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff5.htm">
+                        <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff5; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff5.htm-->Editing the Backburner.xml File</a></span></span>.
+            </li>
+         </ol>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

@@ -1,0 +1,213 @@
+cd /cygdrive/c/cmsbuild-resources/production/ce_4x/4.2
+ant -buildfile ./src/modules/chm/ant/build.xml -lib ./lib/ext/ant -propertyfile ./../../../tmp/ce4_production_4.2//MED/Backburner/Backburner2011/English//20100324105540102_PatriciaMcMullen/build.properties ce.exec.chm.run
+cygpath: can't convert empty path
+Buildfile: .\src\modules\chm\ant\build.xml
+
+ce.exec.chm.contentsort.init:
+    [mkdir] Created dir: C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen\tmp.contentsort
+     [copy] Copying 1 file to C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen\utils
+
+ce.exec.chm.contentsort.sort:
+     [java] [INFO] Sorting started. Locale = en_US
+     [java] [INFO] Sorting configuration = content-sorting-config.xml
+
+ce.exec.chm.contentsort.movefiles:
+     [copy] Copying 1 file to C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen
+
+ce.exec.chm.contentsort.clean:
+   [delete] Deleting directory C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen\tmp.contentsort
+
+ce.exec.chm.contentsort:
+
+ce.exec.chm.resourcedef.processfilelist:
+
+ce.exec.chm.resourcedef.processproperties.init:
+
+ce.exec.chm.resourcedef.processproperties:
+     [echo] Processing Resource Definition to determine hhp-edits and copy to chm root directory.
+     [xslt] Processing C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen\vxf-4.2-old-splash-resource-def.xml to C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen\resourcedef.properties
+     [xslt] Loading stylesheet C:\cmsbuild-resources\production\ce_4x\4.2\src\common\xsl\ce-resourcedef-properties.xsl
+
+ce.exec.chm.resourcedef:
+
+ce.exec.langpreprocess.init:
+
+ce.exec.langpreprocess.main:
+     [echo] Locale: English, en_US
+     [move] Moving 1 files to C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen
+
+ce.exec.langpreprocess:
+
+ce.exec.chm.searchdata.generate:
+     [echo] Generating Search Entries Javascript file
+     [move] Moving 1 files to C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen
+
+ce.exec.chm.searchdata:
+
+ce.exec.chm.run:
+
+ce.misc.createbuildpropfile:
+[propertyfile] Updating property file: C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen\build.properties
+
+BUILD SUCCESSFUL
+Total time: 1 minute 17 seconds
+exit 0
+cd /cygdrive/c/cmsbuild-resources/production/ce_4x/4.2
+ant -buildfile ./src/modules/chm/ant/build.xml -lib ./lib/ext/ant -propertyfile ./../../../tmp/ce4_production_4.2//MED/Backburner/Backburner2011/English//20100324105540102_PatriciaMcMullen/build.properties ce.trfm.chm.run
+cygpath: can't convert empty path
+Buildfile: .\src\modules\chm\ant\build.xml
+
+ce.trfm.chm.htmltransform.chm.nfw:
+
+ce.trfm.chm.htmltransform.chm:
+
+ce.trfm.chm.htmltransform.htm:
+
+ce.trfm.chm.htmltransform.execute:
+     [echo] 
+     [echo]         ce.trfm.chm.htmltransform.outputdir    = ./files
+     [echo]         ce.trfm.chm.htmltransform.artdir       = ./../images
+     [echo]         ce.trfm.chm.htmltransform.animationdir = ./../
+     [echo]         ce.trfm.chm.htmltransform.resourcedir  = ./../
+     [echo]         ce.trfm.chm.htmltransform.xmlinputfile = ./map_content.xml
+     [echo]         ce.trfm.chm.htmltransform.entryxsl     = med_online_help.xsl
+     [echo]         
+     [java] Recoverable error
+     [java] Failure reading file:/C:/cmsbuild-resources/tmp/ce4_production_4.2/MED/Backburner/Backburner2011/English/20100324105540102_PatriciaMcMullen/cshelp.xml: no more input
+     [java] Recoverable error
+     [java] Failure reading file:/C:/cmsbuild-resources/tmp/ce4_production_4.2/MED/Backburner/Backburner2011/English/20100324105540102_PatriciaMcMullen/Command_Data.xml: no more input
+     [java] [DEBUG] Link created for Xref with label = 'Contacting Customer Support'
+     [java] [DEBUG] Link created for Xref with label = 'Advanced Operations'
+     [java] [DEBUG] Link created for Xref with label = 'Obtaining Queue Control'
+     [java] [DEBUG] Link created for Xref with label = 'Obtaining Queue Control'
+     [java] [DEBUG] Link created for Xref with label = 'Managing and Modifying Jobs � Windows'
+     [java] [DEBUG] Link created for Xref with label = 'Managing and Modifying Jobs � Web'
+     [java] [DEBUG] Link created for Xref with label = 'Managing Render Nodes � Windows'
+     [java] [DEBUG] Link created for Xref with label = 'Managing Render Nodes � Web'
+     [java] [DEBUG] Link created for Xref with label = 'Obtaining Queue Control'
+     [java] [DEBUG] Link created for Xref with label = 'Backburner Windows Monitor'
+     [java] [DEBUG] Link created for Xref with label = 'Restarting Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Modifying Job Settings'
+     [java] [DEBUG] Link created for Xref with label = 'Suspending and Reactivating Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Restarting Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Archiving Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Obtaining Queue Control'
+     [java] [DEBUG] Link created for Xref with label = 'Backburner Windows Monitor'
+     [java] [DEBUG] Link created for Xref with label = 'Customizing the Render Node List'
+     [java] [DEBUG] Link created for Xref with label = 'Shifting Nodes Between Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Backburner Web Monitor'
+     [java] [DEBUG] Link created for Xref with label = 'Viewing Job Details and Job Tasks'
+     [java] [DEBUG] Link created for Xref with label = 'Suspending and Reactivating Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Restarting Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Suspending and Reactivating Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Deleting Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Archiving Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Viewing Job Details and Job Tasks'
+     [java] [DEBUG] Link created for Xref with label = 'Setting Email Notifications for a Job'
+     [java] [DEBUG] Link created for Xref with label = 'Shifting Nodes Between Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Working with Server Groups'
+     [java] [DEBUG] Link created for Xref with label = 'Submitting Jobs from a Command Line or Script'
+     [java] [DEBUG] Link created for Xref with label = 'Archiving Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Modifying Manager Settings'
+     [java] [DEBUG] Link created for Xref with label = 'Backburner Web Monitor'
+     [java] [DEBUG] Link created for Xref with label = 'Deleting Offline Render Nodes'
+     [java] [DEBUG] Link created for Xref with label = 'Submitting Jobs from a Command Line or Script'
+     [java] [DEBUG] Link created for Xref with label = 'Setting Render Node Availability'
+     [java] [DEBUG] Link created for Xref with label = 'Working with Server Groups'
+     [java] [DEBUG] Link created for Xref with label = 'Submitting Jobs from a Command Line or Script'
+     [java] [DEBUG] Link created for Xref with label = 'Working with Server Groups'
+     [java] [DEBUG] Link created for Xref with label = 'Restarting Jobs'
+     [java] [DEBUG] Link created for Xref with label = 'Viewing Job Details and Job Tasks'
+     [java] [DEBUG] Link created for Xref with label = 'Options for the cmdjob Utility'
+     [java] [DEBUG] Link created for Xref with label = 'Options for the cmdjob Utility'
+     [java] [DEBUG] Link created for Xref with label = 'Parameters for the cmdjob Utility'
+     [java] [DEBUG] Link created for Xref with label = 'Tokens for the cmdjob Utility'
+     [java] [DEBUG] Link created for Xref with label = 'Verifying Communication Between Two Hosts'
+     [java] [DEBUG] Link created for Xref with label = 'Verifying the Packet Size'
+     [java] [DEBUG] Link created for Xref with label = 'Configuring Backburner Log Files'
+     [java] [DEBUG] Link created for Xref with label = 'Resolving a Host Access Error'
+     [java] [DEBUG] Link created for Xref with label = 'Resolving a Host Access Error'
+     [java] [DEBUG] Link created for Xref with label = 'Resolving Network Card Priority'
+     [java] [DEBUG] Link created for Xref with label = 'Verifying Communication Between Two Hosts'
+     [java] [DEBUG] Link created for Xref with label = 'Resolving a Problem Connecting to the Backburner Manager'
+     [java] [DEBUG] Link created for Xref with label = 'Adding the Backburner Path to the Windows Path Environment Variable'
+     [java] [DEBUG] Link created for Xref with label = 'Resolving an Unavailable Render Node Problem'
+     [java] [DEBUG] Link created for Xref with label = 'Resolving Network Card Priority'
+     [java] [DEBUG] Link created for Xref with label = 'Adding the Backburner Path to the Windows Path Environment Variable'
+     [java] [DEBUG] Link created for Xref with label = 'Restarting Suspended Render Nodes'
+     [java] [DEBUG] Link created for Xref with label = 'Resolving a Render Node Failure'
+     [java] [DEBUG] Link created for Xref with label = 'Adjusting the Maximum Number of Render Nodes Per Job'
+     [java] [DEBUG] Link created for Xref with label = 'Specifying Backburner Log File Contents'
+     [java] [DEBUG] Link created for Xref with label = 'Specifying Backburner Log File Contents'
+     [java] [DEBUG] Link created for Xref with label = 'Verifying Communication Between Two Hosts'
+     [java] [DEBUG] Link created for Xref with label = 'Editing the Backburner.xml File'
+     [java] [DEBUG] Link created for Xref with label = 'Verifying Communication Between Two Hosts'
+     [java] [DEBUG] Link created for Xref with label = 'Setting Render Node Availability'
+     [java] [DEBUG] Link created for Xref with label = 'Verifying Communication Between Two Hosts'
+     [move] Moving 1 files to C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen
+
+ce.trfm.chm.htmltransform:
+
+ce.trfm.chm.toc.init:
+
+ce.trfm.chm.toc.fix:
+
+ce.trfm.chm.toc:
+
+ce.trfm.chm.hhpedits.init:
+
+ce.exec.chm.resourcedef.processproperties.init:
+
+ce.exec.chm.resourcedef.processproperties:
+     [echo] Processing Resource Definition to determine hhp-edits and copy to chm root directory.
+     [xslt] Processing C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen\vxf-4.2-old-splash-resource-def.xml to C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen\resourcedef.properties
+     [xslt] Loading stylesheet C:\cmsbuild-resources\production\ce_4x\4.2\src\common\xsl\ce-resourcedef-properties.xsl
+
+ce.trfm.chm.hhpedits.apply:
+
+ce.trfm.chm.hhpedits:
+
+ce.trfm.chm.convertpng.init:
+
+ce.trfm.chm.convertpng:
+
+ce.trfm.chm.tooltipfiles.init:
+
+ce.trfm.chm.tooltipfiles.addvideos:
+
+ce.trfm.chm.tooltipfiles:
+
+ce.trfm.chm.wthfiles.init:
+
+ce.trfm.chm.wthfiles:
+
+ce.trfm.chm.korean_particle.init:
+
+ce.trfm.chm.korean_particle:
+
+ce.trfm.htm.korean_particle.init:
+
+ce.trfm.htm.korean_particle:
+
+ce.trfm.chm.run:
+
+ce.misc.createbuildpropfile:
+[propertyfile] Updating property file: C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen\build.properties
+
+BUILD SUCCESSFUL
+Total time: 53 seconds
+exit 0
+cd /cygdrive/c/cmsbuild-resources/production/ce_4x/4.2
+ant -buildfile ./src/modules/chm/ant/build.xml -lib ./lib/ext/ant -propertyfile ./../../../tmp/ce4_production_4.2//MED/Backburner/Backburner2011/English//20100324105540102_PatriciaMcMullen/build.properties ce.trfm.chm.remote.done
+cygpath: can't convert empty path
+Buildfile: .\src\modules\chm\ant\build.xml
+
+ce.trfm.chm.remote.done.convertpng:
+
+ce.trfm.chm.remote.done:
+     [echo] This step may fail if the expected OUTPUT files are not found. This can be caused by some errors encountered in the transformation step.
+      [zip] Building zip: C:\cmsbuild-resources\tmp\ce4_production_4.2\MED\Backburner\Backburner2011\English\20100324105540102_PatriciaMcMullen\trfm-output.zip
+
+BUILD SUCCESSFUL
+Total time: 21 seconds
+exit 0

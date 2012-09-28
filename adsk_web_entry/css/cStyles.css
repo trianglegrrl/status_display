@@ -1,0 +1,292 @@
+body{
+	background-color: #505858;
+	margin: 5px 5px 5px 5px;
+}
+
+body.para{
+	background-color: #505050;
+	margin: 5px 5px 5px 5px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #c8c8c8;
+}
+
+a.NodeLink:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #D3BC16;
+}
+
+a.NodeLink{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: underline;
+	color:  #FFA500;
+}
+
+a.jLink:hover, a.jobLink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #D3BC16;
+}
+
+a.jLink, a.jobLink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: underline;
+	color:  #FFA500;
+}
+
+table.bNav input {
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	border-bottom: 1px solid #000000; 
+	border-top:0px;
+	display: block; 
+}
+
+table.jNav input {
+	width:50px; 
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	border-bottom: 1px solid #000000; 
+	border-top:0px;
+	display: block; 
+}
+
+table.bNav input { 
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	border-bottom: 1px solid #000000; 
+}
+
+table.dNav a, table.dNav input, table.dNav button {
+	width:25px; 
+	border:1px solid #000000;
+	display: block; 
+}
+
+table.sNav a, table.sNav input, table.sNav button {
+	width:75px; 
+	border:1px solid #000000;
+	display: block; 
+}
+
+table.jNav a {
+	width:70px; 
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	border-bottom: 1px solid #000000; 
+	display: block; 
+}
+
+table.jNav input.aButton {
+	width:85px; 
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	border-bottom: 1px solid #000000; 
+	border-top:0px;
+	display: block; 
+}
+
+table.jNav input.arButton {
+	width:110px; 
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	border-bottom: 1px solid #000000; 
+	border-top:0px;
+	display: block; 
+}
+
+div.jNav input, table.bNav input, div.dNav input, div.sNav input, div.dNav button, div.sNav button {
+	color: #C8C8C8;
+	background: #343F55 url(/backburner/images/btnH_fill.gif); 
+	text-decoration:none; 
+	font-size:12px; 
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 1px;
+}
+
+div.jNav a, div.bNav a, div.sNav a, div.dNav a  {
+	color: #C8C8C8; 
+	background: #343F55 url(/backburner/images/btnH_fill.gif); 
+	text-decoration:none; 
+	font-size:12px; 
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 2px 2px;
+}
+
+div.jNav a:link, div.bNav a:link {
+	color: #C8C8C8;
+}
+
+div.jNav a:hover, div.jNav input:hover, div.bNav a:hover, div.bNav input:hover, div.sNav a:hover, div.dNav a:hover, div.dNav input:hover, div.sNav input:hover, div.dNav button:hover, div.sNav button:hover {
+	color: #D3BC16;
+	background-image: url(/backburner/images/btn_fill.gif); 
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	border-bottom: 1px solid #000000;  
+}
+
+a.eLink:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #FF0000;
+}
+
+a.eLink{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #A80000;
+}
+
+.eMsg{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #A80000;
+	background-color: #A9A9A9;
+}
+
+.errorHlt, .status{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #A80000;
+	background-color: #A9A9A9;
+}
+
+.jobTitle{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #C8C8C8;
+	background-color: #404040;
+	border: 1px #000000 solid;
+	height:26px;
+}
+
+.noLinkTitle{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFA500;
+	background-color: #404040;
+	border: 1px #000000 solid;
+	height:26px;
+}
+
+.jobFrm{
+	border: 1px #000 solid;
+}
+
+.jobInfoTitle{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #757575;	
+	color: #C8C8C8;
+}
+
+.jobInfo, .taskInfo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C8C8C8;
+}
+
+.tField{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C8C8C8;
+	background-color: #5E6767;
+	border:1px #000 solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #C8C8C8;
+}
+
+select {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C8C8C8;
+	background-color: #5E6767;
+	border:1px #000 solid;
+}
+
+.taskInfo table {
+	border: 1px solid #000000; 
+}
+
+.odd td {
+	background-color: #505858;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C8C8C8;
+}
+
+.even td {
+	background-color: #606868;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #C8C8C8;
+}
+
+.jobMessages {
+        list-style-type: disc;
+	padding-left: 1em;
+	margin-left: 1em;
+}
+
+.status {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#removeList, #addList {
+	width: 200px;
+}
+
+a.sortable{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #C8C8C8;
+	text-decoration: underline;	
+}
+
+a.sortable:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFA500;
+	text-decoration: underline;	
+}
+
+.sort-arrow {
+	width:					11px;
+	height:					11px;
+	background-position:	center center;
+	background-repeat:	no-repeat;
+	margin:					0 2px;
+}
+
+.sort-arrow.descending {
+	background-image: url("/backburner/images/downsimple.gif");
+
+}
+
+.sort-arrow.ascending {
+	background-image: url("/backburner/images/upsimple.gif");
+}

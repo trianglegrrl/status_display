@@ -1,0 +1,173 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Problems with Render Nodes</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Problems with Render Nodes">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ffa.htm','d0e5305','index.html'); initPage('Problems with Render Nodes','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ffa.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ffa.htm" target="content" onClick="javascript:showInContents('d0e5305');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ffa.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Problems Submitting Jobs</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ffb.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Common Problems</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ffd.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Verifying Communication Between Two Hosts</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff9.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm">Troubleshooting Backburner</a>&nbsp;&gt;&nbsp;<a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ffd.htm">Common Problems</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Problems with Render Nodes</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ffa"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74b2"></a></span>These
+            problems can occur with a render node or the jobs sent to it on
+            Linux or Windows systems. 
+         </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74b0"></a></span><div class="table_Ruled">
+            <table cellpadding="0" cellspacing="0" class="ruled">
+               <colgroup>
+                  <col style="width:1.928in">
+                  <col style="width:5.250in">
+                  <tr class="RuledHeading">
+                     <th class="table-heading">Problem</th>
+                     <th class="table-heading">Common Cause </th>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body">A render node appears unavailable in the Backburner Monitor
+                        or Web Monitor.
+                     </td>
+                     <td class="table-body">The workstation is offline, the Backburner Server is
+                        not running or is hung, the Server is not using the correct IP address
+                        for the Manager, or the Manager cannot communicate with the Server. <span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-74af"></a></span><p class="table-body">See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fef.htm">
+                                    <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fef; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fef.htm-->Resolving an Unavailable Render Node Problem</a></span></span>. 
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body">A render node is idle and cannot connect to the Backburner Manager.</td>
+                     <td class="table-body">Check the render node to make sure that the IP address
+                        for the Manager is correct. Other networking devices such as a second
+                        network card, or wireless device connected through a USB port may
+                        cause problems. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff0.htm">
+                                 <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff0; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff0.htm-->Resolving Network Card Priority</a></span></span>.
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body">A <span class="keyboardEntry"> Cannot network render. Backburner not found
+                           or not installed. </span> error appears in the application
+                        when a job is sent for rendering on a Windows system.
+                     </td>
+                     <td class="table-body">Either Backburner is not installed or its path is not
+                        defined in the <em class="mild">Path</em> environment variable. Verify
+                        that Backburner is installed and/or see <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff1.htm">
+                                 <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff1; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7ff1.htm-->Adding the Backburner Path to the Windows Path Environment Variable</a></span></span>.
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body">A render node remains suspended even while jobs are being
+                        processed by Backburner.
+                     </td>
+                     <td class="table-body">The render node is unavailable. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fee.htm">
+                                 <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fee; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fee.htm-->Restarting Suspended Render Nodes</a></span></span>. 
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body">A render node fails when a job is assigned to Backburner.</td>
+                     <td class="table-body">Render nodes can fail during a network render job for
+                        a variety of reasons, some of the most common ones being incorrect
+                        paths, missing plug-ins, fonts, or codecs, or insufficient disk
+                        space. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fed.htm">
+                                 <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fed; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fed.htm-->Resolving a Render Node Failure</a></span></span>. 
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body">An <span class="keyboardEntry"> Unknown TCP gibberish from &lt;Backburner_Manager_IP address_or_hostname&gt; </span> error
+                        appears in Backburner Server.
+                     </td>
+                     <td class="table-body">There is not enough free disk space on the render node,
+                        the connection between Backburner Manager and Backburner Server
+                        is bad, or network drivers are not working properly. Check the amount
+                        of free disk space on the render node and resubmit the job, if this
+                        is sufficient. If the problem reoccurs, check the drivers used for
+                        the network card and TCP/IP protocol as well as the physical network connection
+                        to the render node.
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body">A <span class="keyboardEntry"> Task Error: The filename, directory name,
+                           or volume label syntax is incorrect (0x7b) </span> error appears
+                        in the log file of Backburner Server.
+                     </td>
+                     <td class="table-body">This error occurs when the output folder or directory
+                        name is misspelled or contains invalid characters. Check the output
+                        details for the job in the Backburner Monitor and correct the output
+                        folder name or path to fix this problem.
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body">Only a single render node can be assigned to a job.</td>
+                     <td class="table-body">The output of the job is not an image sequence (for example,
+                        it is an AVI or MOV file). A job that does not produce an image
+                        sequence can only be assigned to a single server. Note that if such
+                        a job is stopped for any reason (to deactivate it or because the
+                        server goes down), re-rendering the file restarts at the first frame.
+                        Frames cannot be appended later to these file types.<span class="anchor_wrapper"><a name="WS73099cc142f4875532927b7f1241b571f20-7356"></a></span><p class="table-body">You can change which
+                           server a single-server job uses by removing the current server from
+                           the job, and then adding a different one.
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body">No additional render nodes can be assigned to a job,
+                        even if render nodes are available.
+                     </td>
+                     <td class="table-body">The maximum number of render nodes per job is reached.
+                        You can change this maximum number to avoid this problem. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fec.htm">
+                                 <!--Reference = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fec; Target topic = WSfc5bb05ff6a7c9ce84ea612123e766f2e2-7fec.htm-->Adjusting the Maximum Number of Render Nodes Per Job</a></span></span>.
+                        However, changing these settings is not recommended. Increase these values
+                        only if you are sure that there is sufficient slack in your Backburner network. 
+                     </td>
+                  </tr>
+               </colgroup>
+            </table>
+         </div>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

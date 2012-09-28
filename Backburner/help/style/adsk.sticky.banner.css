@@ -1,0 +1,71 @@
+body {
+  margin:0;
+  border:0;
+  padding:0;
+  max-height:100%; 
+  overflow: hidden; 
+}
+
+@media print {
+
+* {
+overflow: visible !important;
+}
+
+}/* @media print */
+
+  /* for internet explorer */
+
+* html body {
+  padding:115px 0 0 0; 
+}
+
+
+div.body_content {
+  position:fixed; 
+  top:115px;
+  left:0;
+  bottom:0; 
+  right:0; 
+  padding: 20px 10px 0 20px;
+  overflow:auto; 
+  background:#fff;
+  margin: 0;
+}
+
+
+@media print {
+
+div.body_content {
+  margin: 70px 0 0 0;
+  position:  static; 
+}
+
+} /* @media print */
+
+
+
+ /* for internet explorer */
+* html .body_content {
+  height:100%; 
+  width:100%; 
+  w\idth:95%;
+} 
+* html div.head {
+  width:100%; 
+  w\idth:98%;	
+}
+div.head {
+  position:absolute; 
+  top:0; 
+  left:0; 
+  margin:0;
+  width:100%; 
+  height:110px; 
+  overflow:auto; 
+}
+
+.comments-link {
+	margin: 0 10px 0 0;
+}
+

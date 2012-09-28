@@ -1,0 +1,121 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Tokens for the cmdjob Utility</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Tokens for the cmdjob Utility">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ff9.htm','d0e5048','index.html'); initPage('Tokens for the cmdjob Utility','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ff9.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ff9.htm" target="content" onClick="javascript:showInContents('d0e5048');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ff9.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Parameters for the cmdjob Utility</div><a href="WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ffa.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Submitting Jobs from a Command Line or Script</div><a href="WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ffe.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Troubleshooting Backburner</div><a href="WSfc5bb05ff6a7c9ce84ea612123e766f2e2-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-8000.htm">Advanced Operations</a>&nbsp;&gt;&nbsp;<a href="WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ffe.htm">Submitting Jobs from a
+                  Command Line or Script</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Tokens for the cmdjob Utility</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce-7bbe1658123e766e768-7ff9"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7883"></a></span>A token is a reference
+            to a value that can vary. It is evaluated on the server assigned
+            to the job at the time the <span class="filePath">cmdjob</span> utility
+            executes. You cannot nest tokens within tokens. 
+         </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7882"></a></span><div class="table_Ruled">
+            <table cellpadding="0" cellspacing="0" class="ruled">
+               <colgroup>
+                  <col style="width:1.283in">
+                  <col style="width:5.250in">
+                  <tr class="RuledHeading">
+                     <th class="table-heading">Option</th>
+                     <th class="table-heading">Description</th>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body">%dsc</td>
+                     <td class="table-body">Job description. </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body">%srv</td>
+                     <td class="table-body">Name of the server executing the task. </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body">%tpX</td>
+                     <td class="table-body">Task parameter X from the task list, where X is the column
+                        index in the task list file. 
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body">%*tpX</td>
+                     <td class="table-body">Same as %tpX, where * indicates the number of 0 padded
+                        digits to use. 
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body">%tn</td>
+                     <td class="table-body">Task number of the assigned task.</td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body">%*tn</td>
+                     <td class="table-body">Same as %tn, where * indicates the number of 0 padded
+                        digits to use. 
+                     </td>
+                  </tr>
+                  <tr class="RuledOddRow">
+                     <td class="table-body">%jpX</td>
+                     <td class="table-body">Parameter X from the job parameter file, where X is the
+                        row index in the job parameter file. 
+                     </td>
+                  </tr>
+                  <tr class="RuledEvenRow">
+                     <td class="table-body">%*jpX</td>
+                     <td class="table-body">Same as %jpX, where * indicates the number of 0 padded
+                        digits to use. 
+                     </td>
+                  </tr>
+               </colgroup>
+            </table>
+         </div>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

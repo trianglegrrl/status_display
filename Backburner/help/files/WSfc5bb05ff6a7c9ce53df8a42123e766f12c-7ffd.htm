@@ -1,0 +1,279 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title>Monitoring Render Nodes</title>
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.cpm.css">
+      <link rel="stylesheet" type="text/css" href="./../style/adsk.sticky.banner.css">
+      <link rel="stylesheet" type="text/css" href="./../style/med-html.css"><script type="text/javascript" src="./../scripts/img_swap.js"></script><script type="text/javascript" src="./../scripts/adsk.strings.js"></script><script type="text/javascript" src="./../scripts/adsk.common.js"></script><script type="text/javascript" src="./../scripts/adsk.highlight.js"></script><script type="text/javascript" src="./../scripts/adsk.favorites.js"></script><script type="text/javascript" src="./../scripts/adsk.common.html.js"></script><script language="javascript">
+            function hideInfo() {
+                info = document.getElementById('infoline');
+                info.innerHTML = ' ';
+                info.style.visibility = 'hidden';
+            }
+            function showInfo(title) {
+                info = document.getElementById('infoline');
+                info.innerHTML = title;
+                info.style.visibility='visible';
+            }
+            function addThisPageToFavorites(doc) {
+                if (top.HlpSys && top.HlpSys.favorites) {
+                    top.HlpSys.favorites.addToFavorites(doc);
+                }
+            }
+            </script><meta name="description" content="Monitoring Render Nodes">
+      <meta name="keywords" content="">
+      <meta name="topic-type" content="concept">
+   </head>
+   <body onload="convSymbols(); initFrame('./files/WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffd.htm','d0e2325','index.html'); initPage('Monitoring Render Nodes','Backburner');">
+      <!--
+                            Name = Topic;
+                            Class =  CPM-Topic ISD-Topic ;
+                            Url = WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffd.htm-->
+      <div class="head">
+         <div class="head-block">
+            <div class="nav-group">
+               <!--browse buttons-->
+               <div class="browse">
+                  <nobr>
+                     <div id="ShowTocTitle" style="display:none">Show in Contents</div><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffd.htm" target="content" onClick="javascript:showInContents('d0e2325');" class="headNavLink" onmouseover="showInfo(document.getElementById('ShowTocTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/show_in_contents.gif" border="0"></a><div id="AddFavTitle" style="display:none">Add to Favorites</div><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffd.htm" class="headNavLink" onClick="addThisPageToFavorites(document);" onmouseover="showInfo(document.getElementById('AddFavTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/add_favorite.gif" border="0"></a><div id="homeTitle" style="display:none">Home: Backburner</div><a href="wssplash.html" target="content" class="headNavLink" onmouseover="showInfo(document.getElementById('homeTitle').innerHTML);" onmouseout="hideInfo();"><img src="../images/nav-home-xp.gif" border="0"></a><span class="home-button-separator">&nbsp;</span><div id="prevTitle" style="display:none">Overview</div><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffe.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('prevTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-prev-xp.gif" border="0"></a><div id="parentTitle" style="display:none">Managing Render Nodes – Windows</div><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-8000.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('parentTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-up-xp.gif" border="0"></a><div id="nextTitle" style="display:none">Customizing the Render Node List</div><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffc.htm" class="headNavLink" onmouseover="showInfo(document.getElementById('nextTitle').innerHTML);" onmouseout="hideInfo();"><img src="./../images/nav-next-xp.gif" border="0"></a></nobr>
+               </div>
+               <!--end browse buttons-->
+            </div>
+            <div class="button-info"><span id="infoline">&nbsp;</span></div>
+            <div class="ancestry"><a href="WS73099cc142f48755-6aae5668123e144a987-7df6.htm">Backburner Windows
+                  Monitor Reference</a>&nbsp;&gt;&nbsp;<a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-8000.htm">Managing Render Nodes – Windows</a>&nbsp;&gt;&nbsp;
+            </div>
+            <div class="head-text"><span>Monitoring Render Nodes</span></div>
+         </div>
+      </div>
+      <div class="head-margin">&nbsp;</div>
+      <div style="line-height: 0pt">&nbsp;</div>
+      <div class="head-margin">&nbsp;</div><span class="anchor_wrapper"><a name="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffd"></a></span><div class="body_content">
+         <!--Body-->
+         <p><span class="anchor_wrapper"><a name="WS73099cc142f48755-575eab4c124f5234aa8f7"></a></span>Monitoring allows you to view the overall
+            health of each render node on the Backburner network. Hardware details
+            presented for each render node include the total RAM installed,
+            and remaining disk space. Node status—<em class="mild">available</em>, <em class="mild">unavailable,
+               idle, busy</em>, etc.—is also displayed, as well as details
+            on any job the node is currently processing. Render nodes that have
+            previously connected with the Backburner Manager, but are no longer
+            seen by it, are easily identified, and can be removed, if desired.
+         </p>
+         <!--OList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7565"></a></span><p class="list-intro"><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7564"></a></span>To view render node status:
+         </p>
+         <ol type="1" start="1">
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7563"></a></span>Start the Backburner Monitor and connect
+               to a Backburner Manager. See <span class="hypertext"><span class="char_link"><a href="WS73099cc142f48755-575eab4c124f5234aa8-40a1.htm">
+                        <!--Reference = WS73099cc142f48755-575eab4c124f5234aa8-40a1; Target topic = WS73099cc142f48755-575eab4c124f5234aa8-40a1.htm-->Backburner Windows Monitor</a></span></span>.
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7562"></a></span>The Server List area
+                  occupies the lower panes in the monitor. This area shows nodes organized
+                  in a hierarchical tree view and as a list. 
+               </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-41eb"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_manage_nodes_win/ink_svg/QT_ServerListArea.jpg"></p>
+                  <p></p>
+                  <p class="figure-title"><em class="strong">(a)&nbsp;</em>Tree
+                     View <em class="strong">(b)&nbsp;</em>List View 
+                  </p>
+               </div>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-755f"></a></span>The tree view presents
+                  a hierarchical list of all node groups, as well as the plug-ins
+                  available for the system. You can use this area to see which render
+                  nodes are available to render jobs, as well as manage groups of
+                  nodes.
+               </p>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-755e"></a></span>The list of render nodes
+                  shows all nodes assigned to the group selected in the tree view.
+                  If no group is selected, all render nodes on the system appear in
+                  this area. By default, this area shows the following information
+                  for each node: 
+               </p>
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-755d"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-755c"></a></span>The name and current status of the node.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-755b"></a></span>The job the node is currently processing.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-755a"></a></span>The most recent message sent by the node
+                     to the Backburner Manager.
+                  </li>
+               </ul>
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7559"></a></span>The icon beside each
+                  server provides a visual indication of its state. 
+               </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7558"></a></span><div class="table_Ruled">
+                  <table cellpadding="0" cellspacing="0" class="ruled">
+                     <colgroup>
+                        <col style="width:1.111in">
+                        <col style="width:5.250in">
+                        <tr class="RuledHeading">
+                           <th class="table-heading">Icon Color</th>
+                           <th class="table-heading">State</th>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Green</td>
+                           <td class="table-body">OK</td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Yellow</td>
+                           <td class="table-body">Idle</td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Grey</td>
+                           <td class="table-body">Absent</td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Red</td>
+                           <td class="table-body">Error</td>
+                        </tr>
+                     </colgroup>
+                  </table>
+               </div>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7557"></a></span>Customize the information shown in the
+               list of render nodes, as desired. See <span class="hypertext"><span class="char_link"><a href="WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffc.htm">
+                        <!--Reference = WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffc; Target topic = WSfc5bb05ff6a7c9ce53df8a42123e766f12c-7ffc.htm-->Customizing the Render Node List</a></span></span>.
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7556"></a></span>To locate a render node, do any of the
+               following:
+               <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7555"></a></span><ul>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7554"></a></span>Scroll through the entries using the
+                     scroll bars.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7553"></a></span>Reorder the list in ascending or descending
+                     order by clicking a column heading.
+                  </li>
+                  <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7552"></a></span>Filter the list by first clicking the
+                     square on the right side of each column in the Job list. Enter filtering
+                     criteria in the dialog that appears.
+                  </li>
+               </ul>
+            </li>
+            <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7551"></a></span>Right-click a render node and choose
+               Properties (or press <span class="keyCaps">Ctrl+N</span>).
+               <p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-7550"></a></span>The Server Properties
+                  dialog appears, showing hardware and software information for the
+                  node.
+               </p><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-41ea"></a></span><div class="figure-anchor">
+                  <p><img src="./../images/MED/Backburner/Backburner2011/bb_ug_manage_nodes_win/ink_svg/QT_ServerPropertiesDialog.jpg"></p>
+               </div><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-754e"></a></span><div class="table_Ruled">
+                  <table cellpadding="0" cellspacing="0" class="ruled">
+                     <colgroup>
+                        <col style="width:1.032in">
+                        <col style="width:5.250in">
+                        <tr class="RuledHeading">
+                           <th class="table-heading">Item</th>
+                           <th class="table-heading">Description</th>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body"><em class="strong">General</em></td>
+                           <td class="table-body">
+                              &nbsp;
+                              
+                           </td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Server</td>
+                           <td class="table-body">Server host name.</td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">User</td>
+                           <td class="table-body">User account name under which the Backburner Server was
+                              launched.
+                           </td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Current Job</td>
+                           <td class="table-body">The current job as assigned by the Backburner Manager.</td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Status</td>
+                           <td class="table-body">Current server activity.</td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Handle</td>
+                           <td class="table-body">Server ID, used internally and in log files.</td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Platform</td>
+                           <td class="table-body">Operating system details.</td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Memory</td>
+                           <td class="table-body">Installed RAM.</td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">CPUs</td>
+                           <td class="table-body">The total number of CPUs installed on the system.</td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">IP address</td>
+                           <td class="table-body">The server's IP address. This is used by the Backburner
+                              Manager to communicate with the server.
+                           </td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Perf. Index</td>
+                           <td class="table-body">A value in the range [0–1] indicating the performance
+                              level of the render node, relative to the other servers on the same
+                              job. A score of 1 indicates this is the best-performing server.
+                           </td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Available Disk Space</td>
+                           <td class="table-body">Disk space available for rendering.</td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body"><em class="strong">Plugin Summary</em></td>
+                           <td class="table-body">
+                              &nbsp;
+                              
+                           </td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">burn, mio, Command Line Tool, Wire, etc.</td>
+                           <td class="table-body">A list of adapters installed on the render node, for
+                              example:
+                              <!--UList--><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-754d"></a></span><ul>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-754c"></a></span>burn: The Burn renderer.
+                                 </li>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-754b"></a></span>mio: The Media I/O adapter used by WiretapCentral.
+                                 </li>
+                                 <li><span class="anchor_wrapper"><a name="WS1a9193826455f5ff-316fd70e123dece8002-754a"></a></span>Command Line Tool: The adapter associated
+                                    with cmdjob.
+                                 </li>
+                              </ul>
+                           </td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body"><em class="strong">Module Info</em></td>
+                           <td class="table-body">
+                              &nbsp;
+                              
+                           </td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Server</td>
+                           <td class="table-body">Backburner Server software version.</td>
+                        </tr>
+                        <tr class="RuledOddRow">
+                           <td class="table-body">Backburner API</td>
+                           <td class="table-body">DSO version. Should match the Backburner software version.</td>
+                        </tr>
+                        <tr class="RuledEvenRow">
+                           <td class="table-body">Plugin</td>
+                           <td class="table-body">Backburner Adapter version and platform info.</td>
+                        </tr>
+                     </colgroup>
+                  </table>
+               </div>
+            </li>
+         </ol>
+         <!---->
+         <div class="footer-block"><a href="javascript:doComments('./../html/ac.cmtdialog.htm');"><span class="comments-link">Please send us your comments about this page</span></a></div><br></div>
+   </body>
+</html>

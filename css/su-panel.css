@@ -35,6 +35,7 @@
     		background-color: #ec9854;
  */
     		background-color: #ccc;
+    		margin-top: 20px;
     		padding-top: 5px;
     		padding-bottom: 5px;
     		bottom: -10px;
@@ -60,9 +61,10 @@
     	 margin-top: 35px;
     	}
     	div.time-banner {
-    	 font-size: 550%;
+    	 font-size: 900%;
     	 font-weight: bold;
-    	 margin-top: 35px;
+    	 margin-top: 55px;
+    	 margin-bottom: 100px;
     	}
     	div.weather-details {
     	 font-size: 200%;
@@ -78,7 +80,7 @@
     	 padding-bottom: 20px;
     	}
     	.height-half {
-    		height: 45%;
+    		height: 48%;
     	}
     	.height-third {
     		height: 30%;

@@ -1,7 +1,6 @@
 
 <?php
-	error_reporting(E_NONE);
-	ini_set('display_errors', false);
+	//ini_set('display_errors', true);
 	if (isset($_GET['stopid']))
   {
 		$stopid = $_GET['stopid'];

@@ -61,10 +61,14 @@
     	 margin-top: 35px;
     	}
     	div.time-banner {
-    	 font-size: 900%;
+    	 font-size: 700%;
     	 font-weight: bold;
     	 margin-top: 55px;
     	 margin-bottom: 100px;
+    	}
+    	div.temperature-high-low {
+    		line-height: 1.5em;
+    		text-align: right;
     	}
     	div.weather-details {
     	 font-size: 200%;

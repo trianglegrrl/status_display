@@ -11,6 +11,7 @@ function zeroPad(num, places) {
 	var zero = places - num.toString().length + 1;
 	return Array(+(zero > 0 && zero)).join("0") + num;
 }
+
 function calcTime(offset) {
 
 		// create Date object for current location
@@ -27,8 +28,8 @@ function calcTime(offset) {
 
 		// return time as a string
 		return zeroPad(nd.getHours(), 2) + ':' + zeroPad(nd.getMinutes(), 2) + ':' + zeroPad(nd.getSeconds(), 2);
-
 }
+
 function calcDate(offset) {
 
 		// create Date object for current location
@@ -53,6 +54,7 @@ function cos(deg) {
 function sin(deg) {
 		return Math.sin(deg * Math.PI / 180);
 }
+
 function h_to_hms(h) {
 		var x = h * 3600;
 		var hh = Math.floor(x / 3600);
@@ -64,6 +66,7 @@ function h_to_hms(h) {
 		if (ss < 10) ss = "0" + ss;
 		return hh + ":" + mm + ":" + ss;
 }
+
 function add_commas(n) {
 		n += "";
 		var x = n.split(".");
@@ -75,6 +78,7 @@ function add_commas(n) {
 		}
 		return x1 + x2;
 }
+
 function within_24(n) {
 		if (n < 0) {
 				n += 24;

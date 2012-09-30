@@ -38,15 +38,18 @@
 					<h2 class="border-radius-top">Weather</h2>
 					<div class="row-fluid weather-details">
 						<div class="pagination-centered">
-							<span style="font-size: 130%" class="temperature weather-temp"></span>&deg; C
-							(<span class="temperature weather-high"></span>&deg;  - 
-							<span class="temperature weather-low"></span>&deg; C; 
-							Tmr <span class="temperature weather-tomorrow-high"></span>&deg;  - 
-							<span class="temperature weather-tomorrow-low"></span>&deg; C)
-						</div>
-						<div class="pagination-centered">
-
-							<img class="weather-image" src="" />
+							<div style="width: 50%; float: left">
+								<img class="weather-image" src="" />
+							</div>
+							<div style="width: 50%; float: left;">
+								<div class="pagination-centered float-right temperature-high-low">
+									<span style="font-size: 190%; padding-bottom: 20px;" class="temperature weather-temp"></span>&deg; C<br />
+									Today: <span class="temperature weather-high"></span>&deg;  - 
+									<span class="temperature weather-low"></span>&deg;C <br />
+									Tmr: <span class="temperature weather-tomorrow-high"></span>&deg;  - 
+									<span class="temperature weather-tomorrow-low"></span>&deg;C
+								</div>
+							</div>
 <!-- 
 							<div style="" class="">
 								<span class="weather-temp"></span>&deg; C
@@ -101,7 +104,10 @@
 							minutes = Math.floor(totalSeconds / 60);
 							seconds = zeroPad(totalSeconds % 60, 2);
 							
-							$(this).html(parseInt(minutes) + "m " + seconds);
+							if (!isNaN(parseInt(minutes)))
+							{ 
+								$(this).html(parseInt(minutes) + "m " + seconds);
+							}
 							if (totalSeconds < 180)
 							{
 								$(this).addClass('text-error').removeClass('text-warning');
@@ -121,7 +127,10 @@
 							minutes = Math.floor(totalSeconds / 60);
 							seconds = zeroPad(totalSeconds % 60, 2);
 							
-							$(this).html(minutes + "m " + seconds);
+							if (!isNaN(parseInt(minutes)))
+							{ 
+								$(this).html(parseInt(minutes) + "m " + seconds);
+							}
 							if (totalSeconds < 180)
 							{
 								$(this).addClass('text-error').removeClass('text-warning');

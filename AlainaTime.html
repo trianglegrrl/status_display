@@ -11,7 +11,7 @@
 					<h2 class="border-radius-top">Location in spacetime</h2>
 					<div data-utc-offset="-4" class="time-banner specified-in-timezone time-counter" id="time-utc">00:00:00</div>
 					<div style="padding-top: 20px;" class="time-counter utc-date">00:00:00</div>
-					<div style="padding-top: 20px;" class="time-counter ">(43.670792, -79.428016)</div>
+					<div style="display: none; padding-top: 20px;" class="time-counter ">(43.670792, -79.428016)</div>
 <!-- 
 					<h3 class="border-radius-bottom">
 						<span class="utc-date"></span>
@@ -26,7 +26,7 @@
 					<div class="time-counter"><span data-arrival-index="3" class="63s-arrival"></span></div>
 				</div>
 				<div class="border-radius height-full time-container span3 pagination-centered">
-					<h2 class="border-radius-top">26E at Ossington</h2>
+					<h2 class="border-radius-top">26E at Oss</h2>
 					<div class="time-counter"><span data-arrival-index="0" class="26e-arrival"></span></div>
 					<div class="time-counter"><span data-arrival-index="1" class="26e-arrival"></span></div>
 					<div class="time-counter"><span data-arrival-index="2" class="26e-arrival"></span></div>
@@ -38,15 +38,18 @@
 					<h2 class="border-radius-top">Weather</h2>
 					<div class="row-fluid weather-details">
 						<div class="pagination-centered">
-							Now: <span class="temperature weather-temp"></span>&deg; C
-							(<span class="temperature weather-high"></span>&deg;  - 
-							<span class="temperature weather-low"></span>&deg; C; 
-							Tmr <span class="temperature weather-tomorrow-high"></span>&deg;  - 
-							<span class="temperature weather-tomorrow-low"></span>&deg; C)
-						</div>
-						<div class="pagination-centered">
-
-							<img class="weather-image" src="" />
+							<div style="width: 50%; float: left">
+								<img class="weather-image" src="" />
+							</div>
+							<div style="width: 50%; float: left;">
+								<div class="pagination-centered float-right temperature-high-low">
+									<span style="font-size: 190%; padding-bottom: 20px;" class="temperature weather-temp"></span>&deg; C<br />
+									Today: <span class="temperature weather-high"></span>&deg;  - 
+									<span class="temperature weather-low"></span>&deg;C <br />
+									Tmr: <span class="temperature weather-tomorrow-high"></span>&deg;  - 
+									<span class="temperature weather-tomorrow-low"></span>&deg;C
+								</div>
+							</div>
 <!-- 
 							<div style="" class="">
 								<span class="weather-temp"></span>&deg; C
@@ -55,8 +58,8 @@
 						</div>
 					</div>
 					<h3 class="border-radius-bottom">
-						Currently: <span class="weather-currently"></span> / 
-						Forecast: <span class="weather-forecast"></span>
+						C: <span class="weather-currently"></span> / 
+						F: <span class="weather-forecast"></span>
 					</h3>
 				</div>
 				<div class="border-radius height-full time-container span6 pagination-centered">
@@ -101,7 +104,10 @@
 							minutes = Math.floor(totalSeconds / 60);
 							seconds = zeroPad(totalSeconds % 60, 2);
 							
-							$(this).html(parseInt(minutes) + "m " + seconds);
+							if (!isNaN(parseInt(minutes)))
+							{ 
+								$(this).html(parseInt(minutes) + "m " + seconds);
+							}
 							if (totalSeconds < 180)
 							{
 								$(this).addClass('text-error').removeClass('text-warning');
@@ -121,7 +127,10 @@
 							minutes = Math.floor(totalSeconds / 60);
 							seconds = zeroPad(totalSeconds % 60, 2);
 							
-							$(this).html(minutes + "m " + seconds);
+							if (!isNaN(parseInt(minutes)))
+							{ 
+								$(this).html(parseInt(minutes) + "m " + seconds);
+							}
 							if (totalSeconds < 180)
 							{
 								$(this).addClass('text-error').removeClass('text-warning');
@@ -196,7 +205,7 @@
 			
 			function updateGoogleCalendar()
 			{
-				$('.google-calendar-iframe').html('<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=200&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vkvasjhpfba5uvqab6o91m92b4%40group.calendar.google.com&amp;color=%23691426&amp;src=alainahardie%40gmail.com&amp;color=%232952A3&amp;src=en.canadian%23holiday%40group.v.calendar.google.com&amp;color=%23A32929&amp;src=kristascottdixon%40gmail.com&amp;color=%230D7813&amp;ctz=America%2FToronto" style=" border-width:0 " width="700" height="250" frameborder="0" scrolling="no"></iframe>');
+				$('.google-calendar-iframe').html('<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=200&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vkvasjhpfba5uvqab6o91m92b4%40group.calendar.google.com&amp;color=%23691426&amp;src=alainahardie%40gmail.com&amp;color=%232952A3&amp;src=en.canadian%23holiday%40group.v.calendar.google.com&amp;color=%23A32929&amp;src=kristascottdixon%40gmail.com&amp;color=%230D7813&amp;ctz=America%2FToronto" style=" border-width:0 " width="477" height="250" frameborder="0" scrolling="no"></iframe>');
 			}
 
 			$(function() {

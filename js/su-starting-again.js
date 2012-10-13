@@ -60,7 +60,7 @@ function timeExpired()
 } // timeExpired()
 
 jQuery(document).ready(function() {
-
+	$('#timepicker').timepicker();
 	$('#countdown').countdown({ 
 			until:getServerTime('end'), 
 			format: 'H:M:S',

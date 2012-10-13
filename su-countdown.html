@@ -8,7 +8,7 @@
 		<div class="container-fluid height-full">
 			<div class="time-row row-fluid height-full" id="top-row">
 				<div class="border-radius height-full time-container span12 pagination-centered">
-					<h2 class="border-radius-top">Starting again in <span id="timepicker"</span></h2>
+					<h2 class="border-radius-top">Starting again in</h2>
 					<div id="floater">
 						<div class="alert alert-block" id="countdown">00:00:00</div>
 					</div>
@@ -18,6 +18,8 @@
     <link href="css/jquery.countdown.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/su-panel.css" rel="stylesheet" />
+    
+
 		<style type="text/css">
 			body {
     		height: 100%;
@@ -25,16 +27,16 @@
     		color: white;
     	}
     	div#countdown {
-				font-size: 10em;
+				font-size: 9em;
 				clear: both;
 				height: 100%;
 				position: relative;   
 				padding-top: 30%; 		
     	}
     	#countdown.alert-info {
-    		line-height: 1.1em;
-    		padding-bottom: 100px;
-    		height: 50%;
+    		line-height: 1em;
+    		height: 100%;
+    		padding-top: 20px;
     	}
     	#floater {
     		float: left;
@@ -54,7 +56,8 @@
 			.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
 		</style>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="js/jquery-ui-1.9.0.custom.min.js"></script>
+    <script src="js/jquery-ui-timepicker-addon.js"></script>    
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/su-starting-again.js"></script>

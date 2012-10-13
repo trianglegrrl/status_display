@@ -1,10 +1,25 @@
+function createCountdown()
+{
+
+	$('#countdown').countdown('destroy'); 
+	$('#countdown').countdown({ 
+			until:getServerTime('end'), 
+			format: 'H:M:S',
+			compact: true,
+			onExpiry: timeExpired,
+			onTick: setColour,
+			serverSync: getServerTime('current')
+	}); 
+	 
+}
+
 function getServerTime(type) { 
 	var time = null; 
 	if (type == undefined)
 	{
 		type='current';
 	}
-	$.ajax({url: 'http://localhost/get-countdown-time.php?type=' + type, 
+	$.ajax({url: 'http://9thsense.com/status_display/get-countdown-time.php?type=' + type, 
 			async: false, 
 			dataType: 'text', 
 			success: function(text) { 
@@ -17,12 +32,13 @@ function getServerTime(type) {
 
 function setColour(periods)
 {
+// 	$('#countdown').countdown('option',  'until', getServerTime('end')); 
 	var secondsLeft = $.countdown.periodsToSeconds(periods);
 	
 	if (secondsLeft == 0) { // game over, man
 		console.log('expired' + secondsLeft);
 		timeExpired();
-	} else if (secondsLeft < 300 && secondsLeft > 120) // less than five minutes but more than two, so warn them
+	} else if (secondsLeft <= 300 && secondsLeft >= 120) // less than five minutes but more than two, so warn them
 	{
 		console.log('warning ' + secondsLeft);
 		$('#countdown').removeClass('alert-muted')
@@ -59,15 +75,28 @@ function timeExpired()
 											.html('We\'re underway!<br /> <br />Please join us in the classroom.');
 } // timeExpired()
 
+function setTime(datetimeText, datepickerInstance)
+{
+	$.ajax({url: 'http://9thsense.com/status_display/get-countdown-time.php?type=set' + '&time=' + datetimeText, 
+			async: false, 
+			dataType: 'text', 
+			success: function(text) { 
+					time = new Date(text); 
+					console.log(time);
+			}, error: function(http, message, exc) { 
+					time = new Date(); 
+	}}); 
+} // timeExpired()
+
+
 jQuery(document).ready(function() {
-	$('#timepicker').timepicker();
-	$('#countdown').countdown({ 
-			until:getServerTime('end'), 
-			format: 'H:M:S',
-			compact: true,
-			onExpiry: timeExpired,
-			onTick: setColour,
-			serverSync: getServerTime('current')
-	}); 
-	 
+	$('#timepicker').timepicker({
+		onSelect: setTime,
+		defaultValue: getServerTime('current')
+	});
+	createCountdown();
+	setInterval(function () {
+		createCountdown();
+	}, 5000);
+	
 }); //jQuery(document).ready()

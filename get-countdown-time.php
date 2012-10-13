@@ -1,4 +1,7 @@
 <?php 
+	header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1 
+	header("Expires: Fri, 1 Jan 2010 00:00:00 GMT"); // Date in the past 
+	header("Content-Type: text/plain; charset=utf-8"); // MIME type 
 	date_default_timezone_set('America/Los_Angeles'); // set to local SU time
 	$tmpFile = '/tmp/su-countdown-time.txt';
 	
@@ -8,11 +11,10 @@
 	if ($_REQUEST['type'] == 'end' && file_exists($tmpFile))
 	{
 		$getTime = file_get_contents($tmpFile);
-		$theTime = DateTime::createFromFormat('h:i', $getTime); 
+		$theTime = DateTime::createFromFormat('H:i', $getTime); 
 	} else if ($_REQUEST['type'] == 'set') {
 		$getTime = file_put_contents($tmpFile, $_REQUEST['time']);
-		$theTime = DateTime::createFromFormat('h:i', $_REQUEST['time']);
-		echo $_REQUEST['time'];
+		$theTime = DateTime::createFromFormat('H:i', $_REQUEST['time']);
 	} else {
 		$theTime = new DateTime();
 	}

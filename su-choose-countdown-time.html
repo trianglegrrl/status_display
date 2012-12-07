@@ -10,7 +10,11 @@
 				<div class="border-radius height-full time-container span12 pagination-centered">
 					<h2 class="border-radius-top">Choose countdown time</h2>
 
-						Choose countdown ending time: <input type="text" class="" id="timepicker"></input><p />
+						<!--Choose countdown ending time: <input type="text" class="" id="timepicker"></input><p />-->
+						Hours: <input type="text" class="time-field" id="time-hours" />
+						Minutes: <input type="text" class="time-field" id="time-minutes" />
+						Seconds: <input type="text" class="time-field" id="time-seconds" />
+						<input type="submit" value="Set" name="Set" id="submit-time" /><p />
 						<div class="alert alert-block" id="countdown">00:00:00</div>
 			</div>
 		</div>
@@ -25,16 +29,9 @@
     		background-color: black;
     		color: white;
     	}
-			.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
-			.ui-timepicker-div dl { text-align: left; }
-			.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
-			.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
-			.ui-timepicker-div td { font-size: 90%; }
-			.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
-			
-			.ui-timepicker-rtl{ direction: rtl; }
-			.ui-timepicker-rtl dl { text-align: right; }
-			.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+			.time-field {
+				width: 3em;
+			}
 		</style>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/jquery-ui-1.9.0.custom.min.js"></script>

@@ -19,7 +19,7 @@ function getServerTime(type) {
 	{
 		type='current';
 	}
-	$.ajax({url: 'http://9thsense.com/status_display/get-countdown-time.php?type=' + type, 
+	$.ajax({url: 'http://sutils.singularityu.org/status_display/get-countdown-time.php?type=' + type, 
 			async: false, 
 			dataType: 'text', 
 			success: function(text) { 
@@ -36,11 +36,11 @@ function setColour(periods)
 	var secondsLeft = $.countdown.periodsToSeconds(periods);
 	
 	if (secondsLeft == 0) { // game over, man
-		console.log('expired' + secondsLeft);
+		console.log('expired = ' + secondsLeft + " seconds");
 		timeExpired();
 	} else if (secondsLeft <= 300 && secondsLeft >= 120) // less than five minutes but more than two, so warn them
 	{
-		console.log('warning ' + secondsLeft);
+		console.log('warning = ' + secondsLeft + " seconds");
 		$('#countdown').removeClass('alert-muted')
 										.removeClass('alert-error')
 										.removeClass('alert-info')
@@ -48,14 +48,14 @@ function setColour(periods)
 										.removeClass('alert-success')
 										.addClass('alert-warning');
 	} else if (secondsLeft < 120) { // it's less than two minutes. Danger!
-		console.log('error' + secondsLeft);
+		console.log('under two minutes = ' + secondsLeft + " seconds");
 		$('#countdown').removeClass('alert-muted')
 										.removeClass('alert-warning')
 										.removeClass('alert-info')
 										.removeClass('alert-success')
 										.addClass('alert-error');
 	} else { // in the countdown, but it's more than five minutes
-		console.log('success' + secondsLeft);
+		console.log('success' + secondsLeft + " seconds");
 		$('#countdown').removeClass('alert-muted')
 												.removeClass('alert-warning')
 												.removeClass('alert-info')
@@ -72,12 +72,13 @@ function timeExpired()
 											.removeClass('alert-error')
 											.removeClass('alert-success')
 											.addClass('alert-info')
-											.html('We\'re underway!<br /> <br />Please join us in the classroom.');
+											.html("<br />Time's up!");
 } // timeExpired()
 
 function setTime(datetimeText, datepickerInstance)
 {
-	$.ajax({url: 'http://9thsense.com/status_display/get-countdown-time.php?type=set' + '&time=' + datetimeText, 
+  console.log("datetimeText is " + datetimeText);
+	$.ajax({url: 'http://sutils.singularityu.org/status_display/get-countdown-time.php?type=set' + '&time=' + datetimeText, 
 			async: false, 
 			dataType: 'text', 
 			success: function(text) { 
@@ -90,13 +91,12 @@ function setTime(datetimeText, datepickerInstance)
 
 
 jQuery(document).ready(function() {
-	$('#timepicker').timepicker({
-		onSelect: setTime,
-		defaultValue: getServerTime('current')
-	});
 	createCountdown();
 	setInterval(function () {
-		createCountdown();
+	  createCountdown();
 	}, 5000);
 	
+  $('#submit-time').click (function () {
+		setTime($('#time-hours').val() + ":" + $('#time-minutes').val() + ":" + $('#time-seconds').val(), null);
+  });
 }); //jQuery(document).ready()

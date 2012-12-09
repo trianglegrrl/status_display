@@ -67,12 +67,14 @@ function setColour(periods)
 
 function timeExpired()
 {
+	overSeconds = 0;
 	$('#countdown').removeClass('alert-muted')
 											.removeClass('alert-warning')
 											.removeClass('alert-error')
 											.removeClass('alert-success')
 											.addClass('alert-info')
 											.html("<br />Time's up!");
+  
 } // timeExpired()
 
 function setTime(datetimeText, datepickerInstance)

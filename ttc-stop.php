@@ -28,6 +28,7 @@ function get_final_url( $url, $timeout = 5 )
     $content = curl_exec( $ch );
     $response = curl_getinfo( $ch );
     curl_close ( $ch );
+//     echo $url;
     if ($response['http_code'] == 301 || $response['http_code'] == 302)
     {
         ini_set("user_agent", "Mozilla/5.0 (Windows; U; Windows NT 5.1; rv:1.7.3) Gecko/20041001 Firefox/0.10.1");
@@ -52,7 +53,7 @@ function get_final_url( $url, $timeout = 5 )
 				$myXML = simplexml_load_string($content);
 				//var_dump($myXML->children());
 				$myArr = (array)$myXML;
-				$myArr2 = (array)$myArr['predictions'][1];
+				$myArr2 = (array)$myArr['predictions'][0];
 				//echo var_dump($myArr2) . "<p /> <p />";
 				$myArr3 = (array)$myArr2['direction'];
 				//var_dump( $myArr3['prediction']);

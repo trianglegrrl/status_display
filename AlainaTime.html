@@ -94,52 +94,39 @@
     
     <script type="text/javascript">
 
+			function ttcFillOutArrivalInfo(myObject, stops)
+			{
+				if (!isNaN(stops[myObject.attr('data-arrival-index')]))
+				{
+					totalSeconds = stops[myObject.attr('data-arrival-index')];
+					minutes = Math.floor(totalSeconds / 60);
+					seconds = zeroPad(totalSeconds % 60, 2);
+			
+					if (!isNaN(parseInt(minutes)))
+					{ 
+						myObject.html(parseInt(minutes) + "m " + seconds);
+					}
+					if (totalSeconds < 180)
+					{
+						myObject.addClass('text-error').removeClass('text-warning');
+					} else if (totalSeconds < 300) {
+						myObject.addClass('text-warning').removeClass('text-error');
+					} else {
+						myObject.removeClass('text-warning').removeClass('text-error');
+					}
+				}	
+			}
+		
     	function ttcStops()
     	{
-    		jQuery.getJSON('ttc-stop.php?stopid=1021', function(stops) {
+    		jQuery.getJSON('ttc-stop.php?stopid=1021' + '&ts=' + (new Date()).getTime(), function(stops) {
 					$('.26e-arrival').each(function () {
-						if (!isNaN(stops[$(this).attr('data-arrival-index')]))
-						{
-							totalSeconds = stops[$(this).attr('data-arrival-index')];
-							minutes = Math.floor(totalSeconds / 60);
-							seconds = zeroPad(totalSeconds % 60, 2);
-							
-							if (!isNaN(parseInt(minutes)))
-							{ 
-								$(this).html(parseInt(minutes) + "m " + seconds);
-							}
-							if (totalSeconds < 180)
-							{
-								$(this).addClass('text-error').removeClass('text-warning');
-							} else if (totalSeconds < 300) {
-								$(this).addClass('text-warning').removeClass('text-error');
-							} else {
-								$(this).removeClass('text-warning').removeClass('text-error');
-							}
-						}	
+						ttcFillOutArrivalInfo($(this), stops);
 					});
     		});
-    		jQuery.getJSON('ttc-stop.php?stopid=13895', function(stops) {
+    		jQuery.getJSON('ttc-stop.php?stopid=13895' + '&ts=' + (new Date()).getTime(), function(stops) {
 					$('.63s-arrival').each(function () {
-						if (!isNaN($(this).attr('data-arrival-index')))
-						{
-							totalSeconds = stops[$(this).attr('data-arrival-index')];
-							minutes = Math.floor(totalSeconds / 60);
-							seconds = zeroPad(totalSeconds % 60, 2);
-							
-							if (!isNaN(parseInt(minutes)))
-							{ 
-								$(this).html(parseInt(minutes) + "m " + seconds);
-							}
-							if (totalSeconds < 180)
-							{
-								$(this).addClass('text-error').removeClass('text-warning');
-							} else if (totalSeconds < 300) {
-								$(this).addClass('text-warning').removeClass('text-error');
-							} else {
-								$(this).removeClass('text-warning').removeClass('text-error');
-							}
-						}	
+						ttcFillOutArrivalInfo($(this), stops);
 					});
     		});
     	}
@@ -212,7 +199,7 @@
 				ttcStops();
 				doSimpleWeather();
 				updateGoogleCalendar();
-				setInterval("ttcStops()", 1000);
+				setInterval("ttcStops()", 5000);
 				setInterval("doSimpleWeather()", 180000);
 				setInterval("updateGoogleCalendar()", 180000);
 			});

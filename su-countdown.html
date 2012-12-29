@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time is running out!</title>
+    <!-- CSS and JS at the bottom of <body> -->
+  </head>
+	<body>
+		<div class="container-fluid height-full">
+			<div class="time-row row-fluid height-full" id="top-row">
+				<div class="border-radius height-full time-container span12 pagination-centered">
+					<h2 class="border-radius-top">Time remaining</h2>
+					<div id="floater">
+						<div class="alert alert-block" id="countdown">00:00:00</div>
+					</div>
+			</div>
+		</div>
+		
+    <link href="css/jquery.countdown.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/su-panel.css" rel="stylesheet" />
+    
+
+		<style type="text/css">
+			body {
+    		height: 100%;
+    		background-color: black;
+    		color: white;
+    	}
+    	div#countdown {
+				font-size: 9em;
+				clear: both;
+				height: 100%;
+				position: relative;   
+				padding-top: 30%; 		
+    	}
+    	#countdown.alert-info {
+    		line-height: 1em;
+    		height: 100%;
+    		padding-top: 20px;
+    	}
+    	#floater {
+    		float: left;
+    		height: 100%;
+    		width: 100%;
+    		margin-bottom: -80px;
+    	}
+			.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+			.ui-timepicker-div dl { text-align: left; }
+			.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+			.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+			.ui-timepicker-div td { font-size: 90%; }
+			.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+			
+			.ui-timepicker-rtl{ direction: rtl; }
+			.ui-timepicker-rtl dl { text-align: right; }
+			.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+		</style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery-ui-1.9.0.custom.min.js"></script>
+    <script src="js/jquery-ui-timepicker-addon.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/su-starting-again.js"></script>
+    <script src="js/jquery-ui-timepicker-addon.js"></script>    
+	</body>
+</html>

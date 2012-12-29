@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Choose countdown time</title>
+    <!-- CSS and JS at the bottom of <body> -->
+  </head>
+	<body>
+		<div class="container-fluid height-full">
+			<div class="time-row row-fluid height-full" id="top-row">
+				<div class="border-radius height-full time-container span12 pagination-centered">
+					<h2 class="border-radius-top">Choose countdown time</h2>
+
+						<!--Choose countdown ending time: <input type="text" class="" id="timepicker"></input><p />-->
+						Hours: <input type="text" class="time-field" id="time-hours" />
+						Minutes: <input type="text" class="time-field" id="time-minutes" />
+						Seconds: <input type="text" class="time-field" id="time-seconds" />
+						<input type="submit" value="Set" name="Set" id="submit-time" /><p />
+						<div class="alert alert-block" id="countdown">00:00:00</div>
+			</div>
+		</div>
+		
+    <link href="css/jquery.countdown.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/su-panel.css" rel="stylesheet" />
+    <link href="css/smoothness/jquery-ui-1.9.0.custom.min.css" rel="stylesheet" />
+		<style type="text/css">
+			body {
+    		height: 100%;
+    		background-color: black;
+    		color: white;
+    	}
+			.time-field {
+				width: 3em;
+			}
+		</style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery-ui-1.9.0.custom.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery-ui-timepicker-addon.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/su-starting-again.js"></script>
+	</body>
+</html>

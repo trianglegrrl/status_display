@@ -8,7 +8,7 @@
 		<div class="container-fluid height-full">
 			<div class="time-row row-fluid height-half" id="top-row">
 				<div class="border-radius height-full time-container span6 pagination-centered">
-					<h2 class="border-radius-top">Location in spacetime</h2>
+					<h2 class="border-radius-top">When?</h2>
 					<div data-utc-offset="-5" class="time-banner specified-in-timezone time-counter" id="time-utc">00:00:00</div>
 					<div style="padding-top: 20px;" class="time-counter utc-date">00:00:00</div>
 					<div style="display: none; padding-top: 20px;" class="time-counter ">(43.670792, -79.428016)</div>
@@ -19,14 +19,14 @@
  -->
 				</div>
 				<div class="border-radius height-full time-container span3 pagination-centered">
-					<h2 class="border-radius-top">63S at Dupont</h2>
+					<h2 class="smaller border-radius-top">63 Ossington South</h2>
 					<div class="time-counter"><span data-arrival-index="0" class="63s-arrival"></span></div>
 					<div class="time-counter"><span data-arrival-index="1" class="63s-arrival"></span></div>
 					<div class="time-counter"><span data-arrival-index="2" class="63s-arrival"></span></div>
 					<div class="time-counter"><span data-arrival-index="3" class="63s-arrival"></span></div>
 				</div>
 				<div class="border-radius height-full time-container span3 pagination-centered">
-					<h2 class="border-radius-top">26E at Oss</h2>
+					<h2 class="border-radius-top">26 Dupont East</h2>
 					<div class="time-counter"><span data-arrival-index="0" class="26e-arrival"></span></div>
 					<div class="time-counter"><span data-arrival-index="1" class="26e-arrival"></span></div>
 					<div class="time-counter"><span data-arrival-index="2" class="26e-arrival"></span></div>
@@ -62,12 +62,28 @@
 						F: <span class="weather-forecast"></span>
 					</h3>
 				</div>
+				<div class="border-radius height-full time-container span3 pagination-centered">
+					<h2 class="border-radius-top">94 Wellesley East</h2>
+					<div class="time-counter"><span data-arrival-index="0" class="63n-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="1" class="63n-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="2" class="63n-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="3" class="63n-arrival"></span></div>
+				</div>
+				<div class="border-radius height-full time-container span3 pagination-centered">
+					<h2 class="border-radius-top">26 Dupont West</h2>
+					<div class="time-counter"><span data-arrival-index="0" class="26w-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="1" class="26w-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="2" class="26w-arrival"></span></div>
+					<div class="time-counter"><span data-arrival-index="3" class="26w-arrival"></span></div>
+				</div>
+<!-- 
 				<div class="border-radius height-full time-container span6 pagination-centered">
 					<h2 style="margin-bottom: 0" class="border-radius-top">Calendar</h2>
 					<span class="google-calendar-iframe">
 					</span>
 
 				</div>
+ -->
 			</div>
 
 
@@ -96,7 +112,7 @@
 
 			function ttcFillOutArrivalInfo(myObject, stops)
 			{
-				if (!isNaN(stops[myObject.attr('data-arrival-index')]))
+				if (stops != null && !isNaN(stops[myObject.attr('data-arrival-index')]))
 				{
 					totalSeconds = stops[myObject.attr('data-arrival-index')];
 					minutes = Math.floor(totalSeconds / 60);
@@ -126,6 +142,21 @@
     		});
     		jQuery.getJSON('ttc-stop.php?stopid=13895' + '&ts=' + (new Date()).getTime(), function(stops) {
 					$('.63s-arrival').each(function () {
+						ttcFillOutArrivalInfo($(this), stops);
+					});
+    		});
+    		jQuery.getJSON('ttc-stop.php?stopid=949' + '&ts=' + (new Date()).getTime(), function(stops) {
+					$('.63n-arrival').each(function () {
+						ttcFillOutArrivalInfo($(this), stops);
+					});
+    		});
+    		jQuery.getJSON('ttc-stop.php?stopid=14147' + '&ts=' + (new Date()).getTime(), function(stops) {
+					$('.26w-arrival').each(function () {
+						ttcFillOutArrivalInfo($(this), stops);
+					});
+    		});
+    		jQuery.getJSON('ttc-stop.php?stopid=14745' + '&ts=' + (new Date()).getTime(), function(stops) {
+					$('.94e-arrival').each(function () {
 						ttcFillOutArrivalInfo($(this), stops);
 					});
     		});
